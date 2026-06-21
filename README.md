@@ -68,7 +68,7 @@ cp -r gtk-3.0 /.config/* ~/.config/
 - Weather Display: Open-Meteo API integration with 3-day forecast
 - Clipboard Manager: Cliphist integration for history
 - Power Menu: Shutdown, reboot, suspend, hibernate, logout
-- Application launcher: Start an application for a menu
+- Application launcher: Start an application from a menu
 - Multi-Monitor: Optimized for 3 displays
 - NVIDIA Support: GTX 1070 drivers configured
 - Language Switcher: Select keyboard layout
