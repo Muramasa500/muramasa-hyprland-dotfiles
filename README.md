@@ -68,9 +68,10 @@ cp -r gtk-3.0 /.config/* ~/.config/
 - Weather Display: Open-Meteo API integration with 3-day forecast
 - Clipboard Manager: Cliphist integration for history
 - Power Menu: Shutdown, reboot, suspend, hibernate, logout
+- Application launcher: Start an application for a menu
 - Multi-Monitor: Optimized for 3 displays
 - NVIDIA Support: GTX 1070 drivers configured
-- Language Switcher: EN/SE keyboard layout toggle
+- Language Switcher: Select keyboard layout
 
 ---
 
@@ -91,7 +92,7 @@ Files NOT in this repo (ignored):
 | `Super + F` | Open firefox browser |
 | `Super + Z` | Open Zed editor |
 | `Super + N` | Open Neovim editor |
-| `Super + Shift + C` | Close focused window |
+| `Super + C` | Close focused window |
 | `Super + Arrow` | Move focus to a new window |
 | `Super + Shift + Arrow` | Move focused window to new workspace |
 | `Super + 1 ... 9` | Move to workspace  1 .. 9 |
