@@ -99,52 +99,52 @@ tooltip {
 /* ======================================== */
 #workspaces button:nth-child(1) {
     background-color: rgba(237, 135, 150, 0.2);
-    border-bottom: 3px solid #ed8796;
+    border-bottom: 2px solid #ed8796;
 }
 
 #workspaces button:nth-child(2) {
     background-color: rgba(138, 173, 244, 0.2);
-    border-bottom: 3px solid #8aadf4;
+    border-bottom: 2px solid #8aadf4;
 }
 
 #workspaces button:nth-child(3) {
     background-color: rgba(166, 218, 149, 0.2);
-    border-bottom: 3px solid #a6da95;
+    border-bottom: 2px solid #a6da95;
 }
 
 #workspaces button:nth-child(4) {
     background-color: rgba(245, 169, 127, 0.2);
-    border-bottom: 3px solid #f5a97f;
+    border-bottom: 2px solid #f5a97f;
 }
 
 #workspaces button:nth-child(5) {
     background-color: rgba(238, 212, 159, 0.2);
-    border-bottom: 3px solid #eed49f;
+    border-bottom: 2px solid #eed49f;
 }
 
 #workspaces button:nth-child(6) {
     background-color: rgba(139, 213, 202, 0.2);
-    border-bottom: 3px solid #8bd5ca;
+    border-bottom: 2px solid #8bd5ca;
 }
 
 #workspaces button:nth-child(7) {
     background-color: rgba(145, 215, 227, 0.2);
-    border-bottom: 3px solid #91d7e3;
+    border-bottom: 2px solid #91d7e3;
 }
 
 #workspaces button:nth-child(8) {
     background-color: rgba(180, 190, 254, 0.2);
-    border-bottom: 3px solid #b4befe;
+    border-bottom: 2px solid #b4befe;
 }
 
 #workspaces button:nth-child(9) {
     background-color: rgba(245, 189, 230, 0.2);
-    border-bottom: 3px solid #f5bde6;
+    border-bottom: 2px solid #f5bde6;
 }
 
 #workspaces button:nth-child(n + 10) {
     background-color: rgba(238, 153, 160, 0.2);
-    border-bottom: 3px solid #ee99a0;
+    border-bottom: 2px solid #ee99a0;
 }
 
 /* Active State - Keep same padding/borders to prevent jump */
@@ -331,7 +331,7 @@ tooltip {
 /* TODO: why align to right not works */
 #clock {
     /*color: #f5a97f;*/
-    margin-left: 1000px;
+    /*margin-left: 100px;*/
     font-size: 14px;
     /*padding: 0px 2px 2px 50p;*/
     margin: 0px;
@@ -345,7 +345,7 @@ tooltip {
     padding: 2px 20px 2px 5px;
     /*border-bottom: 2px solid #ed8796;*/
 }
-/* TODO: power button changes color with hover */
-#custom-power.hover {
-    color: red;
+
+#custom-power:hover {
+    color: #ed8796;
 }

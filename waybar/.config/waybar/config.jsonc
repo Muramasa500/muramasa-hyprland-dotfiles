@@ -316,6 +316,7 @@
   "custom/cliphist": {
     "format": " ",
     "tooltip": true,
+    "tooltip-format": "Clip history",
     "on-click": "~/.config/waybar/cliphist.sh",
     "on-click-right": "cliphist delete",
     "return-type": "json",
@@ -330,9 +331,11 @@
     /*"show-passive-items": true, */
   },
 
+  // TODO: fix tooltip
   // Change language
   "hyprland/language": {
     "format": "  {}",
+    // "tooltip-format": "Selected keyboard layout",
     "format-en": "EN",
     "format-sv": "SE",
     "format-en-tootip": "English (US)",
@@ -385,7 +388,8 @@
   // Power menu, turn off, restart, and so on
   "custom/power": {
     "format": "⏻",
-    "tooltip": "Power Menu",
+    // "tooltip": "Power Menu",
+    "tooltip-format": "Power Menu",
     "on-click": "~/.config/waybar/power_menu.sh",
   },
 }
