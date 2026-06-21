@@ -1,0 +1,351 @@
+/* ~/.config/waybar/style.css */
+
+/* ---------------------------------------- */
+/* -----       TASK BAR DESIGN        ----- */
+/* ---------------------------------------- */
+* {
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+    font-size: 17px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(36, 39, 58, 0.85);
+    /*border: 2px solid rgba(138, 173, 244, 0.2);*/
+    /*box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);*/
+    border-radius: 16px;
+
+    margin: 20px 40px;
+    padding: 4px 6px;
+    color: #cad3f5;
+}
+
+/* ---------------------------------------- */
+/* -----           TOOLTIP            ----- */
+/* ---------------------------------------- */
+/* TODO: possible to hide the black square corners behind the rounded corners?*/
+tooltip {
+    background-color: rgba(17, 17, 27, 0.92);
+    border: 1px solid rgba(138, 173, 244, 0.3);
+    border-radius: 12px;
+    padding: 10px 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+#tooltip {
+    background-color: transparent;
+    border: none;
+    border-radius: 12px;
+    padding: 0;
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+    font-size: 14px;
+}
+
+#tooltip label {
+    color: #cad3f5;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* ---------------------------------------- */
+/* -----          WORKSPACES          ----- */
+/* ---------------------------------------- */
+
+#workspaces {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 2px 2px;
+}
+
+#workspaces button {
+    background-color: rgba(48, 52, 70, 0);
+    color: #cad3f5;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 6px 20px 6px 10px;
+    border-radius: 0;
+    transition: all 0.2s ease;
+    border: none;
+    margin: 0;
+    min-width: 45px;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Outer rounded edges */
+#workspaces button:first-child {
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-left: none;
+}
+
+#workspaces button:last-child {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-right: none;
+}
+
+#workspaces button:hover {
+    background-color: rgba(60, 65, 85, 0.5);
+    color: #cad3f5;
+}
+
+/* ======================================== */
+/* -----        INACTIVE COLORS      -----  */
+/* ======================================== */
+#workspaces button:nth-child(1) {
+    background-color: rgba(237, 135, 150, 0.2);
+    border-bottom: 3px solid #ed8796;
+}
+
+#workspaces button:nth-child(2) {
+    background-color: rgba(138, 173, 244, 0.2);
+    border-bottom: 3px solid #8aadf4;
+}
+
+#workspaces button:nth-child(3) {
+    background-color: rgba(166, 218, 149, 0.2);
+    border-bottom: 3px solid #a6da95;
+}
+
+#workspaces button:nth-child(4) {
+    background-color: rgba(245, 169, 127, 0.2);
+    border-bottom: 3px solid #f5a97f;
+}
+
+#workspaces button:nth-child(5) {
+    background-color: rgba(238, 212, 159, 0.2);
+    border-bottom: 3px solid #eed49f;
+}
+
+#workspaces button:nth-child(6) {
+    background-color: rgba(139, 213, 202, 0.2);
+    border-bottom: 3px solid #8bd5ca;
+}
+
+#workspaces button:nth-child(7) {
+    background-color: rgba(145, 215, 227, 0.2);
+    border-bottom: 3px solid #91d7e3;
+}
+
+#workspaces button:nth-child(8) {
+    background-color: rgba(180, 190, 254, 0.2);
+    border-bottom: 3px solid #b4befe;
+}
+
+#workspaces button:nth-child(9) {
+    background-color: rgba(245, 189, 230, 0.2);
+    border-bottom: 3px solid #f5bde6;
+}
+
+#workspaces button:nth-child(n + 10) {
+    background-color: rgba(238, 153, 160, 0.2);
+    border-bottom: 3px solid #ee99a0;
+}
+
+/* Active State - Keep same padding/borders to prevent jump */
+#workspaces button.active {
+    font-weight: 700;
+    color: #24273a;
+    border-right: 1px solid rgba(255, 255, 255, 0.1); /* Same divider as inactive */
+    background-color: inherit;
+    opacity: 1;
+}
+
+/* ======================================== */
+/* -----          ACTIVE COLORS       -----  */
+/* ======================================== */
+
+#workspaces button.active:nth-child(1) {
+    background-color: rgba(237, 135, 150, 0.9);
+}
+#workspaces button.active:nth-child(2) {
+    background-color: rgba(138, 173, 244, 0.9);
+}
+#workspaces button.active:nth-child(3) {
+    background-color: rgba(166, 218, 149, 0.9);
+}
+#workspaces button.active:nth-child(4) {
+    background-color: rgba(245, 169, 127, 0.9);
+}
+#workspaces button.active:nth-child(5) {
+    background-color: rgba(238, 212, 159, 0.9);
+}
+#workspaces button.active:nth-child(6) {
+    background-color: rgba(139, 213, 202, 0.9);
+}
+#workspaces button.active:nth-child(7) {
+    background-color: rgba(145, 215, 227, 0.9);
+}
+#workspaces button.active:nth-child(8) {
+    background-color: rgba(180, 190, 254, 0.9);
+}
+#workspaces button.active:nth-child(9) {
+    background-color: rgba(245, 189, 230, 0.9);
+}
+#workspaces button.active:nth-child(n + 10) {
+    background-color: rgba(238, 153, 160, 0.9);
+}
+
+/* ---------------------------------------- */
+/* -----       GENERAL MODULES        ----- */
+/* ---------------------------------------- */
+#custom-menu,
+#window,
+#custom-weather,
+#mpris,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#custom-cliphist,
+#tray,
+#language,
+#clock,
+#custom-power {
+    /*padding: 6px 8px;*/
+    padding: 2px 8px;
+    margin: 2px;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    background-color: rgba(0, 0, 0, 0);
+    color: #cad3f5;
+}
+
+/* ---------------------------------------- */
+/* -----         LEFT MODULES         ----- */
+/* ---------------------------------------- */
+#custom-menu {
+    color: #1793d1;
+    padding: 3px 23px 3px 15px;
+    margin: 2px 0px 4px 4px;
+    transition: all 0.2s;
+    font-size: 24px;
+}
+
+#custom-menu:hover {
+    color: #ffffff;
+    background-color: rgba(23, 147, 209, 0.25);
+    /*border-radius: 12px;*/
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: 0px;
+}
+
+/* Weather - */
+/*#custom-weather {
+    border-bottom: 2px solid #8bd5ca;
+}*/
+
+/* ---------------------------------------- */
+/* -----        MIDDLE MODULES        ----- */
+/* ---------------------------------------- */
+
+#window {
+    /*background-color: rgba(54, 58, 79, 0.7);*/
+    background-color: rgba(91, 96, 120, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /*border: 2px solid rgba(200, 211, 245, 0.2);*/
+    /*border: 2px solid rgba(198, 160, 246, 0.8);*/
+    border-radius: 12px;
+    color: #cad3f5;
+    padding: 6px 12px;
+    margin: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ---------------------------------------- */
+/* -----        RIGHT MODULES         ----- */
+/* ---------------------------------------- */
+/* Music module  */
+#mpris {
+    background-color: rgba(91, 96, 120, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    color: #cad3f5;
+    padding: 6px 12px;
+    margin: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*#battery {
+    border-bottom: 2px solid #a6da95;
+}*/
+
+/* CPU & Memory */
+/*#cpu,
+#memory {
+    border-bottom: 2px solid #8aadf4;
+}*/
+
+#temperature.critical {
+    background-color: #ed8796;
+    color: #24273a;
+    /* border-bottom: 2px solid #ed8796; */
+}
+
+#network {
+    font-size: 18px;
+    /*border-bottom: 2px solid #a6da95;*/
+}
+
+/* Volume control */
+#pulseaudio {
+    background-color: rgba(0, 0, 0, 0);
+    color: #cad3f5;
+    font-size: 16px;
+    /*border-bottom: 2px solid #b7bdf8;*/
+}
+#pulseaudio.muted {
+    color: #6e738d;
+    font-size: 18px;
+    /*border-bottom: 2px solid #6e738d; */
+}
+
+#custom-cliphist {
+    font-size: 16px;
+    /*border-bottom: 2px solid #ee99a0;*/
+}
+
+#tray {
+    padding: 0;
+    margin: 0;
+    margin: 2px 8px;
+    font-size: 14px;
+    /*border-bottom: 2px solid #91d7e3;*/
+}
+
+#language {
+    padding: 4px 8px;
+    margin: 2px 8px;
+    /*border-bottom: 2px solid #f5bde6;*/
+}
+
+/* TODO: why align to right not works */
+#clock {
+    /*color: #f5a97f;*/
+    margin-left: 1000px;
+    font-size: 14px;
+    /*padding: 0px 2px 2px 50p;*/
+    margin: 0px;
+    /*border-bottom: 2px solid #f5a97f;*/
+}
+
+#custom-power {
+    min-width: 20px;
+    /*color: #ed8796;*/
+    font-size: 18px;
+    padding: 2px 20px 2px 5px;
+    /*border-bottom: 2px solid #ed8796;*/
+}
+/* TODO: power button changes color with hover */
+#custom-power.hover {
+    color: red;
+}

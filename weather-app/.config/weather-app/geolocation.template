@@ -1,0 +1,5 @@
+## Place the geolocation file in the following foler, and rename it as follows:
+## ~/.config/weather-app/geolocation
+
+## Replace with your coordinates: latitude,longitude
+0.000000,0.000000

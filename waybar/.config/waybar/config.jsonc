@@ -1,0 +1,391 @@
+{
+  // ============================================================
+  // ======                   LAYOUT                       ======
+  // ============================================================
+
+  "layer": "top",
+  "position": "top",
+  "height": 50,
+  "spacing": 2,
+
+  "margin-top": 1,
+  "margin-left": 8,
+  "margin-right": 8,
+  "margin-bottom": 0,
+
+  "modules-left": [
+    "custom/menu",
+    "hyprland/workspaces",
+    "custom/weather",
+    "custom/layout",
+  ],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "mpris",
+    "cpu",
+    "memory",
+    "network",
+    "battery",
+    "pulseaudio",
+    "custom/cliphist",
+    "tray",
+    "hyprland/language",
+    "clock",
+    "custom/power",
+  ],
+
+  // ============================================================
+  // ======                WORKSPACES                      ======
+  // ============================================================
+  // FIXME: on-click does not work
+  "hyprland/workspaces": {
+    "format": "{name} {windows}",
+    "format-window-separator": " ",
+    "window-rewrite-default": "",
+    "window-rewrite": {
+      "class<firefox>": "󰈹",
+      "class<org.mozilla.firefox>": "󰈹",
+      "class<brave>": "",
+      "class<brave-beta>": "",
+      "class<brave-dev>": " ",
+      "class<Brave-browser>": "",
+      "class<app.zen_browser.zen>": "󰺕",
+      "class<kitty>": "",
+      "class<alacritty>": "",
+      "class<terminator>": "",
+      "class<com.mitchellh.ghostty>": "󰊠",
+      "class<tmux>": "",
+      "class<thunar>": "",
+      "class<dolphin>": "",
+      "class<konqueror>": "",
+      "class<pcmanfm>": "",
+      "class<nautilus>": "",
+      "class<nemo>": "",
+      "title<steam>": "",
+      "title<discord>": "",
+      "class<spotify>": "",
+      "class<com.spotify.Client>": "",
+      "class<dev.zed.Zed>": "󰵁",
+      "title<code>": "",
+      "title<vscode>": "",
+      "title<nvim>": "",
+      "class<jetbrains-pycharm-ce>": "",
+      "class<jetbrains-rustrover>": "",
+      "class<kate>": "",
+      "class<org.kde.ghostwriter>": "",
+      "class<libreoffice-writer>": "",
+      "class<libreoffice-calc>": "",
+      "class<libreoffice-math>": "",
+      "class<libreoffice-draw>": "",
+      "class<gimp>": "",
+      "title<inkscape>": "",
+      "class<org.gnome.gthumb>": "󰲍",
+      "class<proton.vpn.app.gtk>": "",
+      "class<nordvpn>": "",
+      "class<qalculate-gtk>": "",
+      "class<org.jellyfin.JellyfinDesktop>": "󰼁",
+      "class<tv.plex.PlexDesktop >": "󰚺",
+      "class<tv.kodi.Kodi >": "󰌔",
+      "class<org.pulseaudio.pavucontrol>": "",
+      "class<solaar>": "",
+      "class<vlc>": "󰕼",
+      "class<soffice>": "",
+      "class<libreoffice-impress>": "",
+      "class<qt6ct>": "",
+      "title<Yazi>": "󰇥",
+      "class<audacity>": "󰗅",
+      "class<org.qbittorrent.qBittorrent>": "",
+      "class<utorrent>": "",
+      "class<bittorrent>": "",
+      "class<thunderbird>": "",
+      "class<me.proton.Mail>": "",
+      "class<me.proton.Pass>": "",
+      "class<evolution>": "",
+      "class<signal>": "",
+      "class<element>": "",
+      "class<obs>": "",
+      "class<flameshot>": "󰹑",
+      "class<htop>": "",
+      "class<audacious>": "󰝚",
+      "class<kdenlive>": "",
+      "class<timeshift>": "󰃙",
+      "class<standardnotes>": "󰺿",
+      "class<joplin>": "󰺿",
+      "class<obsidian>": "󰺿",
+      "class<io.ente.auth>": "󰦯",
+      "class<com.bitwarden.desktop>": "󰦯",
+      "class<virtualbox>": "󱩛",
+    },
+    "active-only": false,
+    "show-special": true,
+    "all-outputs": true,
+    "disable-scroll": true,
+    "on-click": "activate",
+    "sort-by": "creation_time",
+  },
+  //"on-scroll-up": "hyprctl workspace +1",
+  // "on-scroll-down": "hyprctl workspace -1"
+  // },
+
+  // ============================================================
+  // ======                   WINDOW                       ======
+  // ============================================================
+  // FIXME: icons and class / title not working properly
+  "hyprland/window": {
+    "format": "{class} - {title}",
+    "rewrite": {
+      "firefox - (.*)": "󰈹 Firefox - $1",
+      "org.mozilla.firefox - (.*)": "󰈹 Firefox - $1",
+      "brave - (.*)": " Brave - $1",
+      "brave-beta - (.*)": " Brave Beta - $1",
+      "brave-dev - (.*)": " Brave Dev - $1",
+      "app.zen_browser.zen - (.*) ": "󰺕 Zen - $1", // FIXME: not working
+      "kitty - (.*)": " Kitty - $1",
+      "alacritty - (.*)": " Alacritty - $1",
+      "terminator - (.*)": " Terminator - $1",
+      "com.mitchellh.ghostty - (.*)": "󰊠 Ghostty - $1",
+      "tmux - (.*)": " tmux - $1",
+      "thunar - (.*)": " Thunar - $1",
+      "dolphin - (.*)": " Dolphin - $1",
+      "konqueror - (.*)": " Konqueror - $1",
+      "pcmanfm - (.*)": " PCManFM - $1",
+      "nautilus - (.*)": " Nautilus - $1",
+      "nemo - (.*)": " Nemo - $1",
+      "steam - (.*)": " Steam - $1",
+      "discord - (.*)": " Discord - $1",
+      "spotify - (.*)": " Spotify - $1",
+      "com.spotify.Client - (.*)": " Spotify - $1",
+      "dev.zed.Zed - (.*)": "󰵁 Zed - $1",
+      "code - (.*)": " VS Code - $1",
+      "nvim - (.*)": " Neovim - $1",
+      "jetbrains-pycharm-ce - (.*)": " PyCharm CE - $1",
+      "jetbrains-rustrover - (.*)": " RustRover - $1",
+      "kate - (.*)": " Kate - $1",
+      "class<org.kde.ghostwriter>": "",
+      "libreoffice-writer - (.*)": " LibreOffice Writer - $1",
+      "libreoffice-calc - (.*)": " LibreOffice Calc - $1",
+      "libreoffice-math - (.*)": " LibreOffice Math - $1",
+      "libreoffice-draw - (.*)": " LibreOffice Draw - $1",
+      "soffice - (.*)": " LibreOffice - $1",
+      "libreoffice-impress - (.*)": " LibreOffice Impress - $1",
+      "gimp-2.10 - (.*)": " GIMP - $1",
+      "inkscape - (.*)": " Inkscape - $1",
+      "gthumb - (.*)": "󰲍 GThumb - $1",
+      "proton-vpn-gtk - (.*)": " Proton VPN - $1",
+      "nordvpn - (.*)": " NordVPN - $1",
+      "qalculate-gtk - (.*)": " Qalculate - $1",
+      "org.jellyfin.JellyfinDesktop - (.*)": "󰼁 Jellyfin - $1",
+      "tv.plex.PlexDesktop - (.*)": "󰚺 Plex - $1",
+      "tv.kodi.Kodi - (.*)": "󰌔 Kodi - $1",
+      "pavucontrol - (.*)": " PulseAudio Control - $1",
+      "solaar - (.*)": " Solaar - $1",
+      "vlc - (.*)": "󰕼 VLC - $1",
+      "qt6ct - (.*)": " Qt6 Configuration - $1",
+      "yazi - (.*)": "󰇥 Yazi - $1",
+      "audacity - (.*)": "󰗅 Audacity - $1",
+      "org.qbittorrent.qBittorrent - (.*)": " $1",
+      "utorrent - (.*)": " uTorrent - $1",
+      "bittorrent - (.*)": " BitTorrent - $1",
+      "thunderbird - (.*)": " Thunderbird - $1",
+      "protonmail - (.*)": " Proton Mail - $1",
+      "protonpass - (.*)": " Proton Pass - $1",
+      "evolution - (.*)": " Evolution - $1",
+      "signal-desktop - (.*)": " Signal - $1",
+      "element-desktop - (.*)": " Element - $1",
+      "obs - (.*)": " OBS - $1",
+      "flameshot - (.*)": "󰹑 Flameshot - $1",
+      "htop - (.*)": " Htop - $1",
+      "audacious - (.*)": "󰝚 Audacious - $1",
+      "kdenlive - (.*)": " Kdenlive - $1",
+      "timeshift - (.*)": "󰃙 Timeshift - $1",
+      "standardnotes - (.*)": "󰺿 Standard Notes - $1",
+      "joplin - (.*)": "󰺿 Joplin - $1",
+      "obsidian - (.*)": "󰺿 Obsidian - $1",
+      "io.ente.auth - (.*)": "󰦯 auth - $1",
+      "com.bitwarden.desktop - (.*)": "󰦯 Ente Auth - $1",
+      "class<com.bitwarden.desktop>": "󰦯 Bitwarden - $1",
+      "virtualbox - (.*)": "󱩛 VirtualBox - $1",
+    },
+    "interval": 1,
+    "return-type": "text",
+    "max-length": 45,
+  },
+
+  // ============================================================
+  // ======                  LEFT MODULES                  ======
+  // ============================================================
+  "custom/menu": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Application Menu",
+    "on-click": "~/.config/waybar/apps_menu.sh",
+    "return-type": "json",
+  },
+
+  // FIXME: Sometimes disapar, seems to loose connection to checking weather sometimes
+  // "custom/weather": {
+  //   "exec": "waybar-weather",
+  //   "restart-interval": 60,
+  //   "return-type": "json",
+  //   "hide-empty-text": true,
+  //   "on-click": "pkill -USR1 waybar-weather",
+  // },
+
+  "custom/weather": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "~/.config/weather-app/weather.sh",
+    "interval": 600,
+    "tooltip": true,
+    "on-click": "xdg-open https://www.smhi.se",
+  },
+
+  // FIXME: Changing layout not working yet
+  // "custom/layout": {
+  //   "format": "{}",
+  //   "return-type": "json",
+  //   "exec": "~/.config/waybar/hypr_layout.sh",
+  //   "interval": 5,
+  //   "tooltip": true,
+  //   "on-click": "~/.config/waybar/toggle_layout.sh",
+  //   "restart-interval": 1,
+  // },
+
+  // ============================================================
+  // ======                MIDDLE MODULES                  ======
+  // ============================================================
+
+  // ============================================================
+  // ======                 RIGHT MODULES                  ======
+  // ============================================================
+  // TODO: possible to let media playing showing album art?
+  // media playing
+  "mpris": {
+    "format": " {artist} - {title}",
+    "format-no-player": " No Music",
+    "format-stopped": "No Music",
+    "format-paused": " {artist} - {title}",
+    // "tooltip-format": "{title} by {artist}",
+    "tooltip-format": "Title: {title}\nArtist: {artist}\nAlbum: {album}",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    //"max-length": 15,
+    "max-length": 35,
+  },
+
+  // Show CPU usage
+  "cpu": { "format": "{usage}% " },
+
+  // Show memory usage
+  "memory": { "format": "{}% " },
+
+  // TODO: is it possible to show several network interfaces?
+  "network": {
+    "interface": "enp0s31f6",
+    "format": "󰈀",
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{bandwidthUpBytes}/{bandwidthDownBytes}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname}: {bandwidthUpBytes}/{bandwidthDownBytes}",
+    "tooltip-format-disconnected": "󰈂",
+    "max-length": 40,
+    "interval": 1,
+  },
+
+  // TODO: want to add a drop down menu (floating) of pavucontrol if possible
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+      /* "headphone": "",
+        "hands-free": "",*/
+      "headset": "",
+      "default": ["", ""],
+    },
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+  },
+
+  "custom/cliphist": {
+    "format": " ",
+    "tooltip": true,
+    "on-click": "~/.config/waybar/cliphist.sh",
+    "on-click-right": "cliphist delete",
+    "return-type": "json",
+    "interval": "once",
+  },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "max-width": 0,
+    "rotate": 0,
+    /*"show-passive-items": true, */
+  },
+
+  // Change language
+  "hyprland/language": {
+    "format": "  {}",
+    "format-en": "EN",
+    "format-sv": "SE",
+    "format-en-tootip": "English (US)",
+    "format-sv-tootip": "Swedish",
+    "on-click": "hyprctl switchxkblayout current next",
+  },
+
+  // FIXME: battery function not working, and can not get it to show battery for both mouse and keyboard, as they seems to share USB dongle
+  // "battery": {
+  //   "bat": ["battery_hidpp_battery_0"],
+  //   "format": "{capacity}% {icon}",
+  //   "format-icons": ["", "", "", "", ""],
+  //   "format-charging": "{capacity}% ",
+  //   "states": {
+  //     "good": 95,
+  //     "warning": 30,
+  //     "critical": 15,
+  //   },
+  //   "tooltip": true,
+  //   "tooltip-format": "MX Keys: {capacity}% ({status})",
+  // },
+
+  "clock": {
+    // "format": "{:%H:%M}",
+    "format": "{:%H:%M\n%Y/%m/%d}",
+    "format-alt": "{:%A\n%B %d, %Y} ",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+      // "on-scroll-up": "tz_up",
+      // "on-scroll-down": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
+  },
+
+  // Power menu, turn off, restart, and so on
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": "Power Menu",
+    "on-click": "~/.config/waybar/power_menu.sh",
+  },
+}

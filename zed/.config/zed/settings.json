@@ -1,0 +1,21 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "text_rendering_mode": "platform_default",
+  "agent_buffer_font_size": 16.0,
+  "cli_default_open_behavior": "existing_window",
+  "icon_theme": "Catppuccin Macchiato",
+  "ui_font_size": 18.0,
+  "buffer_font_size": 16.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Macchiato",
+  },
+}
