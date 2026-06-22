@@ -49,7 +49,7 @@ This repository contains my complete desktop environment configuration including
 git clone git@github.com:Muramasa500/muramasa500-hyprland-dotfiles~/	dotfiles
 sudo pacman -S stow
 cd ~/dotfiles
-stow fastfetch fuzzel gtk-3.0 hyprland kitty qt5ct qt6ct starship waybar weather-app zsh
+stow fastfetch fuzzel gtk-3.0 hyprland kitty qt6ct starship waybar weather-app zsh
 ```
 
 
