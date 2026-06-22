@@ -5,10 +5,7 @@
 /* ---------------------------------------- */
 * {
     font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
-    font-size: 17px;
     min-height: 0;
-    border: none;
-    border-radius: 0;
 }
 
 window#waybar {
@@ -65,9 +62,9 @@ tooltip {
 #workspaces button {
     background-color: rgba(48, 52, 70, 0);
     color: #cad3f5;
-    font-size: 25px;
+    font-size: 19px;
     font-weight: bold;
-    padding: 6px 20px 6px 10px;
+    padding: 4px 10px 4px 10px;
     border-radius: 0;
     transition: all 0.2s ease;
     border: none;
@@ -78,19 +75,19 @@ tooltip {
 
 /* Outer rounded edges */
 #workspaces button:first-child {
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
     border-left: none;
 }
 
 #workspaces button:last-child {
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
     border-right: none;
 }
 
 #workspaces button:hover {
-    background-color: rgba(60, 65, 85, 0.5);
+    background-color: rgba(60, 65, 85, 0.9);
     color: #cad3f5;
 }
 
@@ -217,20 +214,40 @@ tooltip {
     color: #cad3f5;
 }
 
+#custom-menu:hover,
+#window:hover,
+#custom-weather:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-cliphist:hover,
+#tray:hover,
+#language:hover,
+#clock:hover,
+#custom-power:hover {
+    /*margin: 5px 2px;*/
+    /*background-color: rgba(69, 71, 90, 0.4);*/
+    background-color: rgba(147, 153, 178, 0.2);
+    border-radius: 7px;
+    /*border: 2px;*/
+}
+
 /* ---------------------------------------- */
 /* -----         LEFT MODULES         ----- */
 /* ---------------------------------------- */
 #custom-menu {
     color: #1793d1;
-    padding: 3px 23px 3px 15px;
-    margin: 2px 0px 4px 4px;
+    padding: 2px 23px 2px 15px;
+    margin: 2px 0px 2px 4px;
     transition: all 0.2s;
-    font-size: 24px;
+    font-size: 25px;
+    /*font-size: 24px;*/
 }
 
 #custom-menu:hover {
     color: #ffffff;
-    background-color: rgba(23, 147, 209, 0.25);
+    /*background-color: rgba(23, 147, 209, 0.25);*/
     /*border-radius: 12px;*/
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -254,10 +271,15 @@ tooltip {
     /*border: 2px solid rgba(198, 160, 246, 0.8);*/
     border-radius: 12px;
     color: #cad3f5;
-    padding: 6px 12px;
-    margin: 4px;
+    padding: 1px 12px;
+    margin: 2px;
     font-size: 16px;
     font-weight: bold;
+}
+
+#window:hover {
+    background-color: rgba(147, 153, 178, 0.3);
+    border-radius: 12px;
 }
 
 /* ---------------------------------------- */
@@ -269,27 +291,33 @@ tooltip {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     color: #cad3f5;
-    padding: 6px 12px;
-    margin: 4px;
-    font-size: 16px;
+    padding: 3px 12px;
+    margin: 3px;
+    font-size: 15px;
     font-weight: bold;
+}
+
+#mpris:hover {
+    background-color: rgba(147, 153, 178, 0.3);
+    border-radius: 12px;
 }
 
 /*#battery {
     border-bottom: 2px solid #a6da95;
 }*/
 
-/* CPU & Memory */
-/*#cpu,
+/*CPU & Memory */
+#cpu,
 #memory {
-    border-bottom: 2px solid #8aadf4;
-}*/
+    font-size: 16px;
+}
 
-#temperature.critical {
+/*#temperature.critical {
     background-color: #ed8796;
     color: #24273a;
-    /* border-bottom: 2px solid #ed8796; */
-}
+    font-size: 15px;
+    border-bottom: 2px solid #ed8796;
+}*/
 
 #network {
     font-size: 18px;
@@ -317,14 +345,15 @@ tooltip {
 #tray {
     padding: 0;
     margin: 0;
-    margin: 2px 8px;
-    font-size: 14px;
+    /*margin: 2px 8px;*/
+    font-size: 15px;
     /*border-bottom: 2px solid #91d7e3;*/
 }
 
 #language {
-    padding: 4px 8px;
-    margin: 2px 8px;
+    /*padding: 4px 8px;
+    margin: 2px 4px;*/
+    font-size: 16px;
     /*border-bottom: 2px solid #f5bde6;*/
 }
 
@@ -332,16 +361,16 @@ tooltip {
 #clock {
     /*color: #f5a97f;*/
     /*margin-left: 100px;*/
-    font-size: 14px;
+    font-size: 12px;
     /*padding: 0px 2px 2px 50p;*/
-    margin: 0px;
+    /*margin: 0px;*/
     /*border-bottom: 2px solid #f5a97f;*/
 }
 
 #custom-power {
     min-width: 20px;
     /*color: #ed8796;*/
-    font-size: 18px;
+    /*font-size: 18px;*/
     padding: 2px 20px 2px 5px;
     /*border-bottom: 2px solid #ed8796;*/
 }
