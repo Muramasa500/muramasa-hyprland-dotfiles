@@ -131,7 +131,8 @@ Install required packages:
 
 ```bash
 sudo pacman -S \
-  hyprland xdg-desktop-portal-hyprland hyprpolkitagent hyprlock hypridle hyprpaper \
+  hyprland xdg-desktop-portal-hyprland hyprpolkitagent hyprlock \
+  hypridle hyprpaper hyprshot \
   waybar fuzzel kitty swaync \
   zsh starship jq curl \
   gnome-keyring libsecret \
