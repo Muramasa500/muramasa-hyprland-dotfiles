@@ -35,6 +35,7 @@ This repository contains my complete desktop environment configuration including
 ├── kitty/           # Kitty terminal config
 ├── qt6ct/           # qt6 config / themes
 ├── screenshots/     # Screenshots
+├── scripts/         # Custom scripts
 ├── starship/        # Starship prompt config
 ├── waybar/          # Waybar config, style.css, scripts
 ├── weather-app/     # Custom weather script + config
@@ -43,7 +44,18 @@ This repository contains my complete desktop environment configuration including
 
 ## Installation
 
-### Option 1: Using GNU Stow (Recommended)
+### Option 1: Using install.sh
+
+Run the following commands to install the dotfiles using the `install.sh` script:
+
+```bash
+git clone git@github.com:Muramasa500/muramasa500-hyprland-dotfiles~/	dotfiles
+cd ~/dotfiles
+chmod +x install.sh
+./install.sh
+```
+
+### Option 2: Using GNU Stow (Recommended)
 
 ```bash
 git clone git@github.com:Muramasa500/muramasa500-hyprland-dotfiles~/	dotfiles
@@ -53,7 +65,7 @@ stow fastfetch fuzzel gtk-3.0 hyprland kitty qt6ct starship waybar weather-app z
 ```
 
 
-### Option 2: Manual Setup
+### Option 3: Manual Setup
 ```bash
 cp -r fastfetch/.config/* ~/.config/
 cp -r fuzzel/.config/* ~/.config/

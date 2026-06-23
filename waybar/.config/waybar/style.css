@@ -72,7 +72,7 @@ tooltip {
 }
 
 /* Outer rounded edges */
-#workspaces button:first-child {
+/*#workspaces button:first-child {
     border-top-left-radius: 13px;
     border-bottom-left-radius: 13px;
     border-left: none;
@@ -82,7 +82,7 @@ tooltip {
     border-top-right-radius: 13px;
     border-bottom-right-radius: 13px;
     border-right: none;
-}
+}*/
 
 #workspaces button:hover {
     background-color: rgba(60, 65, 85, 0.9);
@@ -92,14 +92,15 @@ tooltip {
 /* ======================================== */
 /* -----        INACTIVE COLORS      -----  */
 /* ======================================== */
+
 #workspaces button:nth-child(1) {
-    background-color: rgba(237, 135, 150, 0.2);
-    border-bottom: 2px solid #ed8796;
+    background-color: rgba(138, 173, 244, 0.2);
+    border-bottom: 2px solid #8aadf4;
 }
 
 #workspaces button:nth-child(2) {
-    background-color: rgba(138, 173, 244, 0.2);
-    border-bottom: 2px solid #8aadf4;
+    background-color: rgba(245, 169, 127, 0.2);
+    border-bottom: 2px solid #f5a97f;
 }
 
 #workspaces button:nth-child(3) {
@@ -108,8 +109,8 @@ tooltip {
 }
 
 #workspaces button:nth-child(4) {
-    background-color: rgba(245, 169, 127, 0.2);
-    border-bottom: 2px solid #f5a97f;
+    background-color: rgba(237, 135, 150, 0.2);
+    border-bottom: 2px solid #ed8796;
 }
 
 #workspaces button:nth-child(5) {
@@ -153,19 +154,22 @@ tooltip {
     background-color: inherit;
     opacity: 1;
 }
-
 #workspaces button.active:nth-child(1) {
-    background-color: rgba(237, 135, 150, 0.9);
-}
-#workspaces button.active:nth-child(2) {
     background-color: rgba(138, 173, 244, 0.9);
 }
+
+#workspaces button.active:nth-child(2) {
+    background-color: rgba(245, 169, 127, 0.9);
+}
+
 #workspaces button.active:nth-child(3) {
     background-color: rgba(166, 218, 149, 0.9);
 }
+
 #workspaces button.active:nth-child(4) {
-    background-color: rgba(245, 169, 127, 0.9);
+    background-color: rgba(237, 135, 150, 0.9);
 }
+
 #workspaces button.active:nth-child(5) {
     background-color: rgba(238, 212, 159, 0.9);
 }
@@ -217,7 +221,6 @@ tooltip {
 #network:hover,
 #pulseaudio:hover,
 #custom-cliphist:hover,
-#tray:hover,
 #language:hover,
 #clock:hover,
 #custom-power:hover {
