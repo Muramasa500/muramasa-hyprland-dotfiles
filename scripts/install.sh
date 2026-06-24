@@ -49,7 +49,6 @@ PACKAGES=(
     "playerctl"
     "pavucontrol"
     "cliphist"
-    "solaar"
     "fastfetch"
     "grim"
     "slurp"
@@ -64,6 +63,11 @@ PACKAGES=(
     "zoxide"
     "git
     "btop"
+    "thunar"
+    "swaync"
+    "zsh-autosuggestions"
+    "zsh-history-substring-search"
+    "zsh-syntax-highlighting"
 )
 
 # Install only missing packages

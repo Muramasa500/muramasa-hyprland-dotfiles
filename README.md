@@ -17,6 +17,7 @@ This repository contains my complete desktop environment configuration including
 | **Fuzzel** | Application launcher & dmenu replacement |
 | **Kitty** | GPU-accelerated terminal emulator |
 | **Zsh** | Shell with Starship prompt |
+| **Thunar** | File manager |
 | **Catppuccin** | Unified color theme across GTK, Qt, and terminals |
 
 ## Screenshots
@@ -28,7 +29,7 @@ This repository contains my complete desktop environment configuration including
 
 ```bash
 ~/dotfiles/
-├── btop        		# btop config
+├── btop             # btop config
 ├── fastfetch        # Fastfetch config
 ├── fuzzel/          # Fuzzel launcher config
 ├── gtk-3.0/         # gtk config / themes
@@ -140,7 +141,9 @@ sudo pacman -S \
   gnome-keyring libsecret \
   gvfs-mtp glib-networking polkit-gnome \
   networkmanager network-manager-applet \
-  playerctl pavucontrol cliphist btop
+  playerctl pavucontrol cliphist btop \  
+  thunar swaync zsh-autosuggestions zsh-history-substring-search \
+  zsh-syntax-highlighting
 ```
 
 ## Contributing
