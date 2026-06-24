@@ -9,8 +9,8 @@
 }
 
 window#waybar {
-    background-color: rgba(36, 39, 58, 0.85);
-    border-radius: 16px;
+    background-color: rgba(35, 35, 35, 0.9);
+    /*border-radius: 16px;*/
 
     margin: 20px 40px;
     padding: 4px 6px;
@@ -58,17 +58,20 @@ tooltip {
 }
 
 #workspaces button {
-    background-color: rgba(48, 52, 70, 0);
+    /*background-color: rgba(48, 52, 70, 0);*/
+    background-color: rgba(55, 55, 55, 0.9);
     color: #cad3f5;
     font-size: 19px;
     font-weight: bold;
     padding: 2px 10px 2px 10px;
     border-radius: 0;
     transition: all 0.2s ease;
-    border: none;
-    margin: 1px 0px;
-    min-width: 45px;
     border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid rgba(136, 57, 239, 0.3);
+    /*margin: 1px 0px;*/
+    min-width: 55px;
+    /*border-right: 1px solid rgba(0, 0, 0, 0.3);*/
 }
 
 /* Outer rounded edges */
@@ -84,64 +87,49 @@ tooltip {
     border-right: none;
 }*/
 
-#workspaces button:hover {
-    background-color: rgba(60, 65, 85, 0.9);
+/*#workspaces button:hover {
+    background-color: rgba(60, 65, 145, 0.3);
     color: #cad3f5;
-}
+}*/
 
 /* ======================================== */
 /* -----        INACTIVE COLORS      -----  */
 /* ======================================== */
 
-#workspaces button:nth-child(1) {
-    background-color: rgba(138, 173, 244, 0.2);
-    border-bottom: 2px solid #8aadf4;
-}
+/* ======================================== */
+/* -----        INACTIVE COLORS      -----  */
+/* ======================================== */
 
+/*#workspaces button:nth-child(1) {
+    background-color: rgba(50, 60, 85, 0.8);
+}
 #workspaces button:nth-child(2) {
-    background-color: rgba(245, 169, 127, 0.2);
-    border-bottom: 2px solid #f5a97f;
+    background-color: rgba(75, 65, 55, 0.8);
 }
-
 #workspaces button:nth-child(3) {
-    background-color: rgba(166, 218, 149, 0.2);
-    border-bottom: 2px solid #a6da95;
+    background-color: rgba(60, 70, 55, 0.8);
 }
-
 #workspaces button:nth-child(4) {
-    background-color: rgba(237, 135, 150, 0.2);
-    border-bottom: 2px solid #ed8796;
+    background-color: rgba(70, 55, 65, 0.8);
 }
-
 #workspaces button:nth-child(5) {
-    background-color: rgba(238, 212, 159, 0.2);
-    border-bottom: 2px solid #eed49f;
+    background-color: rgb(70, 68, 55);
 }
-
 #workspaces button:nth-child(6) {
-    background-color: rgba(139, 213, 202, 0.2);
-    border-bottom: 2px solid #8bd5ca;
+    background-color: rgb(55, 70, 65);
 }
-
 #workspaces button:nth-child(7) {
-    background-color: rgba(145, 215, 227, 0.2);
-    border-bottom: 2px solid #91d7e3;
+    background-color: rgb(55, 65, 75);
 }
-
 #workspaces button:nth-child(8) {
-    background-color: rgba(180, 190, 254, 0.2);
-    border-bottom: 2px solid #b4befe;
+    background-color: rgb(58, 58, 90);
 }
-
 #workspaces button:nth-child(9) {
-    background-color: rgba(245, 189, 230, 0.2);
-    border-bottom: 2px solid #f5bde6;
+    background-color: rgb(75, 60, 75);
 }
-
 #workspaces button:nth-child(n + 10) {
-    background-color: rgba(238, 153, 160, 0.2);
-    border-bottom: 2px solid #ee99a0;
-}
+    background-color: rgb(70, 55, 60);
+}*/
 
 /* ======================================== */
 /* -----          ACTIVE COLORS       ----- */
@@ -149,44 +137,74 @@ tooltip {
 
 #workspaces button.active {
     font-weight: 700;
-    color: #24273a;
+    color: #cad3f5;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    /*border: 2px solid rgba(255, 255, 255, 0.1);*/
+    /*box-shadow: 0 0 10px rgba(237, 135, 150, 0.3);*/
+
     background-color: inherit;
     opacity: 1;
+    border-radius: 4px;
+
+    background-color: rgba(114, 135, 253, 0.4);
+    /*background-color: rgba(127, 132, 156, 0.4);*/
+    /*background-color: rgba(138, 173, 244, 0.4);*/
+    /*border-bottom: 3px solid #8aadf4;*/
 }
 #workspaces button.active:nth-child(1) {
-    background-color: rgba(138, 173, 244, 0.9);
+    /*background-color: rgba(138, 173, 244, 0.5);*/
+    border-bottom: 4px solid rgb(254, 100, 11);
+    box-shadow: 0 0 10px rgba(254, 100, 11, 0.4);
 }
 
 #workspaces button.active:nth-child(2) {
-    background-color: rgba(245, 169, 127, 0.9);
+    /*background-color: rgba(138, 173, 244, 0.5);*/
+    border-bottom: 4px solid rgb(220, 138, 120);
+    box-shadow: 0 0 10px rgba(220, 138, 120, 0.4);
 }
 
 #workspaces button.active:nth-child(3) {
-    background-color: rgba(166, 218, 149, 0.9);
+    /*background-color: rgba(138, 173, 244, 0.5);*/
+    border-bottom: 4px solid rgb(136, 57, 239);
+    box-shadow: 0 0 10px rgba(136, 57, 239, 0.4);
 }
 
 #workspaces button.active:nth-child(4) {
-    background-color: rgba(237, 135, 150, 0.9);
+    /*background-color: rgba(138, 173, 244, 0.5);*/
+    border-bottom: 4px solid rgb(64, 160, 43);
+    box-shadow: 0 0 10px rgba(64, 160, 43, 0.4);
 }
 
 #workspaces button.active:nth-child(5) {
-    background-color: rgba(238, 212, 159, 0.9);
+    /*background-color: rgba(238, 212, 159, 0.4);*/
+    border-bottom: 4px solid rgb(230, 69, 83);
+    box-shadow: 0 0 10px rgba(230, 69, 83, 0.4);
 }
 #workspaces button.active:nth-child(6) {
-    background-color: rgba(139, 213, 202, 0.9);
+    /*background-color: rgba(139, 213, 202, 0.4);*/
+    border-bottom: 4px solid rgb(136, 57, 239);
+    box-shadow: 0 0 10px rgba(136, 57, 239, 0.4);
 }
 #workspaces button.active:nth-child(7) {
-    background-color: rgba(145, 215, 227, 0.9);
+    /*background-color: rgba(145, 215, 227, 0.4);*/
+    border-bottom: 4px solid rgb(234, 118, 203);
+    box-shadow: 0 0 10px rgba(234, 118, 203, 0.4);
 }
 #workspaces button.active:nth-child(8) {
-    background-color: rgba(180, 190, 254, 0.9);
+    /*background-color: rgba(180, 190, 254, 0.4);*/
+    border-bottom: 4px solid rgb(114, 135, 253);
+    box-shadow: 0 0 10px rgba(114, 135, 253, 0.4);
 }
 #workspaces button.active:nth-child(9) {
-    background-color: rgba(245, 189, 230, 0.9);
+    /*background-color: rgba(245, 189, 230, 0.4);*/
+    border-bottom: 4px solid rgb(210, 15, 57);
+    box-shadow: 0 0 10px rgba(210, 15, 57, 0.4);
 }
 #workspaces button.active:nth-child(n + 10) {
-    background-color: rgba(238, 153, 160, 0.9);
+    /*background-color: rgba(238, 153, 160, 0.4);*/
+    border-bottom: 4px solid rgb(32, 159, 181);
+    box-shadow: 0 0 10px rgba(32, 159, 181, 0.4);
 }
 
 /* ---------------------------------------- */
@@ -213,7 +231,6 @@ tooltip {
     color: #cad3f5;
 }
 
-#custom-menu:hover,
 #window:hover,
 #custom-weather:hover,
 #cpu:hover,
@@ -222,10 +239,9 @@ tooltip {
 #pulseaudio:hover,
 #custom-cliphist:hover,
 #language:hover,
-#clock:hover,
-#custom-power:hover {
-    background-color: rgba(147, 153, 178, 0.2);
-    border-radius: 7px;
+#clock:hover {
+    background-color: rgba(147, 153, 178, 0.3);
+    border-radius: 10px;
 }
 
 /* ---------------------------------------- */
@@ -236,7 +252,7 @@ tooltip {
     padding: 2px 23px 2px 15px;
     margin: 2px 0px 2px 4px;
     transition: all 0.2s;
-    font-size: 25px;
+    font-size: 27px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-right: 0px;
@@ -268,6 +284,7 @@ tooltip {
     background-color: rgba(91, 96, 120, 0.3);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
+    border: 2px solid rgba(202, 211, 245, 0.5);
     color: #cad3f5;
     padding: 1px 12px;
     /*margin: 2px;*/
@@ -288,6 +305,7 @@ tooltip {
 #mpris {
     background-color: rgba(91, 96, 120, 0.3);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(202, 211, 245, 0.5);
     border-radius: 12px;
     color: #cad3f5;
     padding: 2px 12px 2px 8px;
@@ -366,7 +384,7 @@ tooltip {
 
 #language {
     font-size: 16px;
-    padding: 2px 3px 2px 5px;
+    padding: 2px 4px 2px 5px;
     margin: 5px 2px;
 }
 
@@ -374,14 +392,14 @@ tooltip {
 #clock {
     font-size: 12px;
     padding: 2px 3px 2px 5px;
-    margin: 0px 2px;
+    margin: 3px 2px;
 }
 
 #custom-power {
     min-width: 20px;
     padding: 2px 10px 2px 7px;
-    font-size: 17px;
-    margin: 3px 2px;
+    font-size: 18px;
+    margin: 3px 10px 3px 3px;
     border-radius: 50px;
 }
 

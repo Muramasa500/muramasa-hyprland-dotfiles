@@ -5,12 +5,12 @@
 
   "layer": "top",
   "position": "top",
-  "height": 30,
+  "height": 45,
   "spacing": 2,
 
-  "margin-top": 1,
-  "margin-left": 8,
-  "margin-right": 8,
+  "margin-top": 0,
+  // "margin-left": 8,
+  // "margin-right": 8,
   "margin-bottom": 0,
 
   "modules-left": [
