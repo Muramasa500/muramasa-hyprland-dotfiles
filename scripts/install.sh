@@ -16,7 +16,7 @@ read -p "Proceed? (y/n): " confirm
 
 # 3. Symlink directories using Stow
 cd "$(dirname "$0")"
-stow fastfetch fuzzel gtk-3.0 hyprland kitty qt6ct starship waybar weather-app zsh
+stow btop fastfetch fuzzel gtk-3.0 hyprland kitty qt6ct starship waybar weather-app zsh
 
 # 4. Install dependencies
 echo "📦 Installing dependencies..."
@@ -62,7 +62,8 @@ PACKAGES=(
     "procs"
     "fzf"
     "zoxide"
-    "git"
+    "git
+    "btop"
 )
 
 # Install only missing packages

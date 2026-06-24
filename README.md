@@ -28,7 +28,6 @@ This repository contains my complete desktop environment configuration including
 
 ```bash
 ~/dotfiles/
-├── btop             # btop config
 ├── fastfetch        # Fastfetch config
 ├── fuzzel/          # Fuzzel launcher config
 ├── gtk-3.0/         # gtk config / themes
@@ -45,7 +44,7 @@ This repository contains my complete desktop environment configuration including
 
 ## Installation
 
-### Option 1: Using install.sh
+### Option 1: Using install.sh (Recommended)
 
 Run the following commands to install the dotfiles using the `install.sh` script:
 
@@ -56,19 +55,18 @@ chmod +x install.sh
 ./install.sh
 ```
 
-### Option 2: Using GNU Stow (Recommended)
+### Option 2: Using GNU Stow 
 
 ```bash
 git clone git@github.com:Muramasa500/muramasa500-hyprland-dotfiles~/	dotfiles
 sudo pacman -S stow
 cd ~/dotfiles
-stow btop fastfetch fuzzel gtk-3.0 hyprland kitty qt6ct starship waybar weather-app zsh
+stow fastfetch fuzzel gtk-3.0 hyprland kitty qt6ct starship waybar weather-app zsh
 ```
 
 
 ### Option 3: Manual Setup
 ```bash
-cp -r btop/.config/* ~/.btop/
 cp -r fastfetch/.config/* ~/.config/
 cp -r fuzzel/.config/* ~/.config/
 cp -r gtk-3.0 /.config/* ~/.config/
@@ -140,7 +138,7 @@ sudo pacman -S \
   gnome-keyring libsecret \
   gvfs-mtp glib-networking polkit-gnome \
   networkmanager network-manager-applet \
-  playerctl pavucontrol cliphist btop
+  playerctl pavucontrol cliphist
 ```
 
 ## Contributing
