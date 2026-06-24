@@ -28,6 +28,7 @@ This repository contains my complete desktop environment configuration including
 
 ```bash
 ~/dotfiles/
+├── btop        		# btop config
 ├── fastfetch        # Fastfetch config
 ├── fuzzel/          # Fuzzel launcher config
 ├── gtk-3.0/         # gtk config / themes
@@ -67,6 +68,7 @@ stow fastfetch fuzzel gtk-3.0 hyprland kitty qt6ct starship waybar weather-app z
 
 ### Option 3: Manual Setup
 ```bash
+cp -r btop/.config/* ~/.config/
 cp -r fastfetch/.config/* ~/.config/
 cp -r fuzzel/.config/* ~/.config/
 cp -r gtk-3.0 /.config/* ~/.config/
@@ -138,7 +140,7 @@ sudo pacman -S \
   gnome-keyring libsecret \
   gvfs-mtp glib-networking polkit-gnome \
   networkmanager network-manager-applet \
-  playerctl pavucontrol cliphist
+  playerctl pavucontrol cliphist btop
 ```
 
 ## Contributing
