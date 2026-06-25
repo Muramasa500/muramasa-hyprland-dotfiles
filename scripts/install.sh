@@ -50,7 +50,6 @@ PACKAGES=(
     "pavucontrol"
     "cliphist"
     "fastfetch"
-    "grim"
     "slurp"
     "rofi-wayland"
     "eza"
@@ -61,13 +60,16 @@ PACKAGES=(
     "procs"
     "fzf"
     "zoxide"
-    "git
     "btop"
-    "thunar"
     "swaync"
     "zsh-autosuggestions"
     "zsh-history-substring-search"
     "zsh-syntax-highlighting"
+    "thunar"
+    "thunar-archive-plugin"
+    "thunar-media-tags-plugin"
+    "thunar-vcs-plugin"
+    "thunar-volman"
 )
 
 # Install only missing packages
