@@ -49,9 +49,10 @@ PACKAGES=(
     "playerctl"
     "pavucontrol"
     "cliphist"
+    "wl-clipboard"
+    "xclip"
     "fastfetch"
     "slurp"
-    "rofi-wayland"
     "eza"
     "dust"
     "fd"
@@ -60,8 +61,8 @@ PACKAGES=(
     "procs"
     "fzf"
     "zoxide"
+    "direnv"
     "btop"
-    "swaync"
     "zsh-autosuggestions"
     "zsh-history-substring-search"
     "zsh-syntax-highlighting"
@@ -70,6 +71,7 @@ PACKAGES=(
     "thunar-media-tags-plugin"
     "thunar-vcs-plugin"
     "thunar-volman"
+    "neovim"
 )
 
 # Install only missing packages

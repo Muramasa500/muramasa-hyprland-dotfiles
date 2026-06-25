@@ -135,16 +135,17 @@ Install required packages:
 ```bash
 sudo pacman -S \
   hyprland xdg-desktop-portal-hyprland hyprpolkitagent hyprlock \
-  hypridle hyprpaper hyprshot cliphist btop \
+  hypridle hyprpaper hyprshot cliphist wl-clipboard xclip btop \
   waybar fuzzel kitty swaync gnome-keyring libsecret \
   zsh starship jq curl playerctl pavucontrol \
   gvfs-mtp glib-networking polkit-gnome \
   networkmanager network-manager-applet \
   thunar thunar-archive-plugin thunar-media-tags-plugin \
-  thunar-vcs-plugin thunar-volman swaync \
+  thunar-vcs-plugin thunar-volman neovim \
   zsh-autosuggestions zsh-history-substring-search \
-  zsh-syntax-highlighting slurp rofi-wayland eza dust fd bat \
-  ripgrep procs fzf zoxide git btop thunar swaync
+  zsh-syntax-highlighting slurp eza dust fd bat \
+  ripgrep procs fzf zoxide btop thunar direnv \
+  
 ```
 
 ## Contributing
