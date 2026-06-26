@@ -1,0 +1,22 @@
+configuration {
+    // Application launcher
+    display-drun: "󰣇";
+    drun-display-format: "{icon} {name}";
+
+    // Window switcher
+    display-window: "󰖲 Windows";
+
+    // For run command
+    display-run: "󰌽 Run";
+
+    // General settings
+    show-icons: true;
+    icon-theme: "Papirus";
+    lines: 12;
+    columns: 1;
+    scrollbar: true;
+    matching: "fuzzy";
+    tokenize: true;
+}
+
+@theme "style-default.rasi"

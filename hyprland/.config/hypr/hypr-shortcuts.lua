@@ -9,7 +9,7 @@
 local mainMod = "SUPER"
 local terminal = "kitty"
 local fileManager = "thunar"
-local menu = "~/.config/waybar/apps_menu.sh"
+local menu = "rofi -show drun -display-drun ''"
 local screenLocker = "hyprlock"
 local browser = "firefox"
 local calculator = "qalculate-gtk"
@@ -28,12 +28,13 @@ local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(screenLocker))
-hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("~/.config/hypr/show-shortcuts.sh"))
+hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("~/.config/hypr/rofi-shortcuts.sh"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(calculator))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(cli_editor))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(gui_editor))
 -- hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("flatpak run com.spotify.Client"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("spotify-launcher"))
+hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("rofi -show window"))
 
 
 -- Edit coniguration files

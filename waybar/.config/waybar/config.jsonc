@@ -218,18 +218,9 @@
     "format": "",
     "tooltip": true,
     "tooltip-format": "Application Menu",
-    "on-click": "~/.config/waybar/apps_menu.sh",
+    "on-click": "rofi -show drun -display-drun ''",
     "return-type": "json",
   },
-
-  // FIXME: Sometimes disapar, seems to loose connection to checking weather sometimes
-  // "custom/weather": {
-  //   "exec": "waybar-weather",
-  //   "restart-interval": 60,
-  //   "return-type": "json",
-  //   "hide-empty-text": true,
-  //   "on-click": "pkill -USR1 waybar-weather",
-  // },
 
   "custom/weather": {
     "format": "{}",
@@ -240,7 +231,7 @@
     "on-click": "xdg-open https://www.smhi.se",
   },
 
-  // FIXME: Changing layout not working yet
+  // TODO: Changing layout not working yet
   // "custom/layout": {
   //   "format": "{}",
   //   "return-type": "json",
@@ -317,8 +308,8 @@
     "format": " ",
     "tooltip": true,
     "tooltip-format": "Clip history",
-    "on-click": "~/.config/waybar/cliphist.sh",
-    "on-click-right": "cliphist delete",
+    "on-click": "~/.config/waybar/rofi-cliphist.sh",
+    // "on-click-right": "cliphist delete",
     "return-type": "json",
     "interval": "once",
   },
@@ -335,7 +326,6 @@
   // Change language
   "hyprland/language": {
     "format": "  {}",
-    // "tooltip-format": "Selected keyboard layout",
     "format-en": "EN",
     "format-sv": "SE",
     "format-en-tootip": "English (US)",
@@ -388,8 +378,7 @@
   // Power menu, turn off, restart, and so on
   "custom/power": {
     "format": "⏻",
-    // "tooltip": "Power Menu",
     "tooltip-format": "Power Menu",
-    "on-click": "~/.config/waybar/power_menu.sh",
+    "on-click": "~/.config/waybar/rofi-power-menu.sh",
   },
 }

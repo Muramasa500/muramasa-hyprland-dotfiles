@@ -14,9 +14,10 @@ This repository contains my complete desktop environment configuration including
 |-----------|-------------|
 | **Hyprland** | Tiling Wayland compositor with animations |
 | **Waybar** | Status bar with custom modules (weather, clock, system stats) |
-| **Fuzzel** | Application launcher & dmenu replacement |
+| **Rofi** | Application launcher, clip history, and power menu, and SUPER+TAB, a dmenu replacement |
 | **Kitty** | GPU-accelerated terminal emulator |
 | **Zsh** | Shell with Starship prompt |
+| **Zed** | Modern editor, made in Rust |
 | **Thunar** | File manager |
 | **Catppuccin** | Unified color theme across GTK, Qt, and terminals |
 
@@ -25,22 +26,33 @@ This repository contains my complete desktop environment configuration including
 ![Desktop Screenshot](./screenshots/desktop1.png)
 ![Desktop Screenshot](./screenshots/desktop2.png)
 
+## Themes & Assets
+
+This configuration uses the following third-party assets:
+
+- **Catppuccin Theme Suite** - [github.com/catppuccin](https://github.com/catppuccin)
+  - GTK themes (`gtk-Catppuccin`)
+  - Qt5ct theme (`qt5t-Catppuccin`)
+  - Rofi theme (`rofi-catppuccin`)
+  - Zed theme (`zed-catppuccin`)
+
 ## Directory Structure
 
 ```bash
 ~/dotfiles/
 ├── btop             # btop config
 ├── fastfetch        # Fastfetch config
-├── fuzzel/          # Fuzzel launcher config
 ├── gtk-3.0/         # gtk config / themes
 ├── hyprland/        # Hyprland config (hyprland.lua)
 ├── kitty/           # Kitty terminal config
 ├── qt6ct/           # qt6 config / themes
+├── rofi/            # Wofi config
 ├── screenshots/     # Screenshots
 ├── scripts/         # Custom scripts
 ├── starship/        # Starship prompt config
 ├── waybar/          # Waybar config, style.css, scripts
 ├── weather-app/     # Custom weather script + config
+├── zed /            # Zed config / themes
 └── zsh/             # .zshrc shell config
 ```
 
@@ -111,6 +123,7 @@ Files NOT in this repo (ignored):
 | `Super + Arrow` | Move focus to a new window |
 | `Super + Shift + Arrow` | Move focused window to new workspace |
 | `Super + 1 ... 9` | Move to workspace  1 .. 9 |
+| `Super + Tab` | Open Rofi window switcher |
 |------------|--------|
 
 *(Check `~/.config/hypr/hyprland.lua` for full list)*
@@ -136,7 +149,7 @@ Install required packages:
 sudo pacman -S \
   hyprland xdg-desktop-portal-hyprland hyprpolkitagent hyprlock \
   hypridle hyprpaper hyprshot cliphist wl-clipboard xclip btop \
-  waybar fuzzel kitty swaync gnome-keyring libsecret \
+  waybar rofi-wayland kitty swaync gnome-keyring libsecret \
   zsh starship jq curl playerctl pavucontrol \
   gvfs-mtp glib-networking polkit-gnome \
   networkmanager network-manager-applet \
@@ -144,7 +157,7 @@ sudo pacman -S \
   thunar-vcs-plugin thunar-volman neovim \
   zsh-autosuggestions zsh-history-substring-search \
   zsh-syntax-highlighting slurp eza dust fd bat \
-  ripgrep procs fzf zoxide btop thunar direnv \
+  ripgrep procs fzf zoxide btop thunar direnv zed \
   
 ```
 
