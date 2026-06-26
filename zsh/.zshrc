@@ -93,6 +93,15 @@ if [[ "$TERM" != "dumb" ]]; then
 
     alias zed='zeditor'
 
+    # =====================================================
+    # =====               GIT ALIASES                 =====
+    # =====================================================
+    # Bat colorized
+    alias ghi='bat <(gh issue view "$@")'
+    # completion
+    source <(gh completion -s zsh) >> ~/.zshrc
+    # fzf integration
+    alias ghr='gh pr list | fzf --reverse --preview "gh pr view {}"'
 
 
     # =====================================================
@@ -151,6 +160,7 @@ if [[ "$TERM" != "dumb" ]]; then
     # alias cd='z'           # Replace cd entirely with z
     # alias cdi='zi'         # Interactive version
 
+
     # =====================================================
     # =====            DIRENV INTERGRATION            =====
     # =====================================================
@@ -160,7 +170,7 @@ if [[ "$TERM" != "dumb" ]]; then
 
 
     # =====================================================
-    # =====           ENVIRONMENT VARIABLE            =====
+    # =====          ENVIRONMENT VARIABLES            =====
     # =====================================================
     export TERM=xterm-256color
     export CLICOLOR=1

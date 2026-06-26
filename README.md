@@ -36,6 +36,8 @@ This configuration uses the following third-party assets:
   - Rofi theme (`rofi-catppuccin`)
   - Zed theme (`zed-catppuccin`)
 
+- **rofi-power-menu** - [github.com/jluttine/rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
+
 ## Directory Structure
 
 ```bash
@@ -75,7 +77,7 @@ chmod +x install.sh
 git clone git@github.com:Muramasa500/muramasa500-hyprland-dotfiles~/	dotfiles
 sudo pacman -S stow
 cd ~/dotfiles
-stow fastfetch fuzzel gtk-3.0 hyprland kitty qt6ct starship waybar weather-app zsh
+stow fastfetch gtk-3.0 hyprland kitty qt6ct fuzzel starship waybar weather-app zed zsh
 ```
 
 
@@ -138,6 +140,12 @@ After cloning, you must:
 1. Create ~/.config/weather-app/geolocation with your own coordinates.
 2. Generate new SSH keys on your machine (ssh-keygen).
 3. Set your own wallpapers in ~/.config/hypr/wallpapers/.
+4. Get rofi-power-menu:
+```bash
+sudo curl -o /usr/local/bin/rofi-power-menu https://raw.githubusercontent.com/jluttine/rofi-power-menu/master/rofi-power-menu
+sudo chmod +x /usr/local/bin/rofi-power-menu
+```
+
 
 ---
 
