@@ -46,7 +46,7 @@ This configuration uses the following third-party assets:
 ├── hyprland/        # Hyprland config (hyprland.lua)
 ├── kitty/           # Kitty terminal config
 ├── qt6ct/           # qt6 config / themes
-├── rofi/            # Wofi config
+├── rofi/            # Rofi config
 ├── screenshots/     # Screenshots
 ├── scripts/         # Custom scripts
 ├── starship/        # Starship prompt config
@@ -96,6 +96,7 @@ cp -r gtk-3.0 /.config/* ~/.config/
 - Clipboard Manager: Cliphist integration for history
 - Power Menu: Shutdown, reboot, suspend, hibernate, logout
 - Application launcher: Start an application from a menu
+- A window switcher: Start a ALT-TAB style window switcher ()
 - Multi-Monitor: Optimized for 3 displays
 - NVIDIA Support: GTX 1070 drivers configured
 - Language Switcher: Select keyboard layout
@@ -157,8 +158,7 @@ sudo pacman -S \
   thunar-vcs-plugin thunar-volman neovim \
   zsh-autosuggestions zsh-history-substring-search \
   zsh-syntax-highlighting slurp eza dust fd bat \
-  ripgrep procs fzf zoxide btop thunar direnv zed \
-  
+  ripgrep procs fzf zoxide btop thunar direnv zed
 ```
 
 ## Contributing
