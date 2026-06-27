@@ -245,5 +245,3 @@ Feel free to fork and modify! I am not accepting PRs back to main, but issues ar
 ![License](https://img.shields.io/github/license/Muramasa500/muramasa-hyprland-dotfiles?style=flat-square)
 
 ---
-
-ENDOFREADME
