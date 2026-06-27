@@ -155,7 +155,6 @@ cp -r gtk-3.0 /.config/* ~/.config/
 | `Super + 1 ... 9` | Move to workspace  1 .. 9 |
 | `Super + Tab` | Open Rofi window switcher |
 | `Super + F` | Full screen |
-|------------|--------|
 
 *(Check `~/.config/hypr/hyprland.lua` for full list)*
 
