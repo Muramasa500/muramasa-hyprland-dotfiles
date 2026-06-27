@@ -102,7 +102,7 @@ Run the following commands to install the dotfiles using the `install.sh` script
 
 ```bash
 git clone git@github.com:Muramasa500/muramasa500-hyprland-dotfiles~/	dotfiles
-cd ~/dotfiles
+cd ~/dotfiles/scripts
 chmod +x install.sh
 ./install.sh
 ```
