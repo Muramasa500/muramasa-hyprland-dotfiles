@@ -161,20 +161,17 @@ hl.bind(mainMod .. " + ALT + Left", hl.dsp.exec_cmd("hyprctl dispatch moveintomo
 -- ============================================================
 -- ======           KEYBINDINGS SCREENSHOTS              ======
 -- ============================================================
--- TODO: Change screenshot to flameshot
--- Screenshot entire screen → saves to ~/Pictures/Screenshots
-hl.bind("SUPER + CTRL + P", hl.dsp.exec_cmd("grim ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png"))
+-- Screenshot entire screen → save to file
+hl.bind("SUPER + CTRL + P", hl.dsp.exec_cmd("hyprshot -m output -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"))
 
--- Screenshot selected region → saves to ~/Pictures/Screenshots
-hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("grim -g \"$(slurp)\" ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png"))
+-- Screenshot selected region → save to file
+hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("hyprshot -m region -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"))
 
--- Screenshot active window → saves to ~/Pictures/Screenshots
-hl.bind("SUPER + ALT + P",
-    hl.dsp.exec_cmd(
-        "grim -g \"$(hyprctl activewindow -j | jq -r '.at + \\\" \\\" + (.size | [.width, .height] | join(\\\" \\\"))')\" ~/Pictures/Screenshots/$(date +%Y%m%d_%H%M%S).png"))
+-- Screenshot active window → save to file
+hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("hyprshot -m window -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"))
 
--- Screenshot region → copies to clipboard instead of saving
-hl.bind("CTRL + Print", hl.dsp.exec_cmd("grim -g \"$(slurp)\" - | wl-copy"))
+-- Screenshot selected region → copy to clipboard
+hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m region -c"))
 
 
 

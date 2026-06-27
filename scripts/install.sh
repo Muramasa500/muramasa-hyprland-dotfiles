@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail  # Exit on error, undefined var, or pipeline failures
 # Installation script
 
 echo "🚀 Installing Muramasa's Hyprland Dotfiles..."
@@ -15,8 +16,33 @@ read -p "Proceed? (y/n): " confirm
 [[ $confirm == "y" ]] || exit 1
 
 # 3. Symlink directories using Stow
-cd "$(dirname "$0")"
-stow btop fastfetch gtk-3.0 hyprland kitty qt6ct rofi starship waybar weather-app zed zsh
+echo "📁 Creating symlinks with GNU Stow..."
+
+# Verify all source directories exist before stowing
+for dir in btop fastfetch gtk-3.0 hyprland kitty qt6ct rofi starship waybar weather-app zed zsh; do
+    if [[ ! -d "$dir" ]]; then
+        echo "❌ Missing required directory: $dir"
+        exit 1
+    fi
+done
+
+# Navigate to script directory
+cd "$(dirname "$0")" || { echo "❌ Could not cd to script directory"; exit 1; }
+
+# Run stow with verbose output and error handling
+stow --verbose=2 btop fastfetch gtk-3.0 hyprland kitty qt6ct rofi starship waybar weather-app zed zsh || {
+    echo "❌ Stow failed - check for conflicting files in ~/.config"
+    echo "💡 Try: stow --restore [package]"
+    exit 1
+}
+
+cd "$(dirname "$0")" || { echo "❌ Could not cd to script directory"; exit 1; }
+
+stow btop fastfetch gtk-3.0 hyprland kitty qt6ct rofi starship waybar weather-app zed zsh || {
+    echo "❌ Stow failed - check for conflicting files in ~/.config"
+    echo "💡 Try manually resolving conflicts or using '--verbose' flag"
+    exit 1
+}
 
 # 4. Install dependencies
 echo "📦 Installing dependencies..."
@@ -48,6 +74,7 @@ PACKAGES=(
     "network-manager-applet"
     "playerctl"
     "pavucontrol"
+    "wireplumber"
     "cliphist"
     "wl-clipboard"
     "xclip"
@@ -72,6 +99,9 @@ PACKAGES=(
     "thunar-vcs-plugin"
     "thunar-volman"
     "neovim"
+    "qalculate-gtk"
+    "brightnessctl"
+    "direnv"
 )
 
 # Install only missing packages
@@ -93,4 +123,8 @@ echo "✅ Dependencies installed!"
 
 
 # 5. Install complete
+echo ""
+echo "📋 Post-install steps:"
+echo "  1. Create ~/.config/weather-app/geolocation with your coordinates"
+echo "  2. Download rofi-power-menu (see README)"
 echo "✅ Installation complete! Reboot or start Hyprland."
