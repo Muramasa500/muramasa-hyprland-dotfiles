@@ -235,10 +235,6 @@ sudo pacman -S \
 - [Starship](https://github.com/starship/starship) - Cross-shell prompt
 - [Slurp](https://github.com/emersion/slurp) - Selection tool for screenshots
 
-## Contributing
-
-Feel free to fork and modify! I am not accepting PRs back to main, but issues are welcome.
-
 
 ## License
 
