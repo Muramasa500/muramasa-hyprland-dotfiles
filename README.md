@@ -145,7 +145,7 @@ cp -r gtk-3.0 /.config/* ~/.config/
 |------------|--------|
 | `Super + space` | Open rofi application launcher|
 | `Super + Q` | Open kitty terminal |
-| `Super + F` | Open firefox browser |
+| `Super + B` | Open firefox browser |
 | `Super + Z` | Open Zed editor |
 | `Super + N` | Open Neovim editor |
 | `Super + C` | Close focused window |
