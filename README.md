@@ -38,8 +38,6 @@ This is an early work-in-progress. Configs may be incomplete, and the install sc
 <img alt="Terminal" src="https://img.shields.io/badge/Terminal-kitty-7559A3?style=for-the-badge">
 <img alt="Shell" src="https://img.shields.io/badge/Shell-zsh-F48FB2?style=for-the-badge">
 <img alt="Launcher" src="https://img.shields.io/badge/Launcher-rofi-E9E5CA?style=for-the-badge">
-</p>
-<p align="center">
 <img alt="Editor" src="https://img.shields.io/badge/Editor-Zed-084CCF?style=for-the-badge&logo=zedindustries&logoColor=white">
 <img alt="File Manager" src="https://img.shields.io/badge/File_Manager-Thunar-288B97?style=for-the-badge">
 </p>
@@ -104,7 +102,7 @@ Run the following commands to install the dotfiles using the `install.sh` script
 
 ```bash
 git clone git@github.com:Muramasa500/muramasa500-hyprland-dotfiles~/	dotfiles
-cd ~/dotfiles
+cd ~/dotfiles/scripts
 chmod +x install.sh
 ./install.sh
 ```
@@ -147,7 +145,7 @@ cp -r gtk-3.0 /.config/* ~/.config/
 |------------|--------|
 | `Super + space` | Open rofi application launcher|
 | `Super + Q` | Open kitty terminal |
-| `Super + F` | Open firefox browser |
+| `Super + B` | Open firefox browser |
 | `Super + Z` | Open Zed editor |
 | `Super + N` | Open Neovim editor |
 | `Super + C` | Close focused window |
@@ -237,15 +235,9 @@ sudo pacman -S \
 - [Starship](https://github.com/starship/starship) - Cross-shell prompt
 - [Slurp](https://github.com/emersion/slurp) - Selection tool for screenshots
 
-## Contributing
-
-Feel free to fork and modify! I am not accepting PRs back to main, but issues are welcome.
-
 
 ## License
 
-MIT License - See LICENSE file for details.
+![License](https://img.shields.io/github/license/Muramasa500/muramasa-hyprland-dotfiles?style=flat-square)
 
 ---
-
-ENDOFREADME
