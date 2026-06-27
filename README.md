@@ -145,16 +145,16 @@ cp -r gtk-3.0 /.config/* ~/.config/
 
 | Keybinding | Action |
 |------------|--------|
-| `Super + space` | Open rofi application launcher|
-| `Super + Q` | Open kitty terminal |
+| `Super + A` | Open rofi application launcher|
+| `Super + ENTER` | Open kitty terminal |
 | `Super + B` | Open firefox browser |
 | `Super + Z` | Open Zed editor |
-| `Super + N` | Open Neovim editor |
-| `Super + C` | Close focused window |
+| `Super + Q` | Close focused window |
 | `Super + Arrow` | Move focus to a new window |
 | `Super + Shift + Arrow` | Move focused window to new workspace |
 | `Super + 1 ... 9` | Move to workspace  1 .. 9 |
 | `Super + Tab` | Open Rofi window switcher |
+| `Super + F` | Full screen |
 |------------|--------|
 
 *(Check `~/.config/hypr/hyprland.lua` for full list)*
