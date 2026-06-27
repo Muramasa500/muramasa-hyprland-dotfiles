@@ -242,7 +242,7 @@ Feel free to fork and modify! I am not accepting PRs back to main, but issues ar
 
 ## License
 
-![License](https://img.shields.io/github/license/yourusername/repo-name?style=flat-square)
+![License](https://img.shields.io/github/license/Muramasa500/muramasa-hyprland-dotfiles?style=flat-square)
 
 ---
 
