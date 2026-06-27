@@ -26,7 +26,7 @@ These configurations cover the complete desktop experience—from window managem
 
 ## Overview
 
-⚠️ **WIP — v0.1.0**
+⚠️ **WIP**
 
 This is an early work-in-progress. Configs may be incomplete, and the install script may not work correctly on all systems. Not recommended for use yet.
 
@@ -36,7 +36,7 @@ This is an early work-in-progress. Configs may be incomplete, and the install sc
 <img alt="Compositor" src="https://img.shields.io/badge/Compositor-Hyprland-58E1FF?style=for-the-badge&logo=hyprland&logoColor=white">
 <img alt="Bar" src="https://img.shields.io/badge/Bar-Waybar-131C2A?style=for-the-badge">
 <img alt="Theme" src="https://img.shields.io/badge/Theme-Catppuccin%20Macchiato-CAD3F5?style=for-the-badge&logo=catppuccin&logoColor=white">
-<img alt="Terminal" src="https://img.shields.io/badge/Terminal-kitty-7559A3?style=for-the-badge">
+<img alt="Terminal" src="https://img.shields.io/badge/Terminal-Kitty-3551F3?style=for-the-badge">
 <img alt="Shell" src="https://img.shields.io/badge/Shell-zsh-F48FB2?style=for-the-badge">
 <img alt="Launcher" src="https://img.shields.io/badge/Launcher-rofi-E9E5CA?style=for-the-badge">
 <img alt="Editor" src="https://img.shields.io/badge/Editor-Zed-084CCF?style=for-the-badge&logo=zedindustries&logoColor=white">
@@ -72,6 +72,7 @@ This configuration uses the following third-party assets:
   - Qt5ct theme (`qt5t-Catppuccin`)
   - Rofi theme (`rofi-catppuccin`)
   - Zed theme (`zed-catppuccin`)
+  - Kitty theme (`kitty-catppuccin`)
 
 - **rofi-power-menu** - [github.com/jluttine/rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
 
@@ -183,7 +184,7 @@ Install required packages:
 ```bash
 sudo pacman -S \
   hyprland xdg-desktop-portal-hyprland hyprpolkitagent hyprlock \
-  hypridle hyprpaper hyprshot cliphist wl-clipboard xclip btop \
+  hypridle hyprpaper hyprshot hyprsunset cliphist wl-clipboard xclip btop \
   waybar rofi-wayland kitty swaync gnome-keyring libsecret \
   zsh starship jq curl playerctl pavucontrol \
   gvfs-mtp glib-networking polkit-gnome \
@@ -235,9 +236,6 @@ sudo pacman -S \
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch) - System information display
 - [Starship](https://github.com/starship/starship) - Cross-shell prompt
 - [Slurp](https://github.com/emersion/slurp) - Selection tool for screenshots
-
-
-## License
 
 
 ---

@@ -111,6 +111,9 @@ hl.on("hyprland.start", function()
     -- Sleep mode
     hl.exec_cmd("hypridle &")
 
+    -- Hyprsunset
+    hl.exec_cmd("hyprsunset -c ~/.config/hypr/hyprsunset.conf &")
+
     -- Cliboard
     hl.exec_cmd("wl-paste --type text --watch cliphist store &")
     hl.exec_cmd("wl-paste --type image --watch cliphist store &")

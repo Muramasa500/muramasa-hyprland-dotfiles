@@ -57,6 +57,7 @@ PACKAGES=(
     "hypridle"
     "hyprpaper"
     "hyprshot"
+    "hyprsunset"
     "waybar"
     "rofi-wayland"
     "kitty"

@@ -5,7 +5,6 @@
 -- ============================================================
 -- ======           PROGRAMS (VARIABLES)                 ======
 -- ============================================================
-
 local mainMod = "SUPER"
 local terminal = "kitty"
 local fileManager = "thunar"
@@ -14,28 +13,33 @@ local screenLocker = "hyprlock"
 local browser = "firefox"
 local calculator = "qalculate-gtk"
 local gui_editor = "zeditor"
-local cli_editor = "kitty nvim"
+-- local cli_editor = "kitty nvim"
 
 
 -- ============================================================
 -- ======                OPEN PROGRAMS                   ======
 -- ============================================================
--- Open programs
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal), { description = "Open terminal" })
+hl.bind(mainMod .. " + RETURN ", hl.dsp.exec_cmd(terminal), { description = "Open terminal" })
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager), { description = "Open File Manager" })
-hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu), { description = "Open Application launcher" })
-local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close(), { description = "Close window" })
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser), { description = "Open browser" })
-hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("~/.config/hypr/rofi-shortcuts.sh"), { description = "Open rofi shortcuts" })
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(calculator), { description = "Open calculator" })
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(cli_editor), { description = "Open CLI editor" })
+-- hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(cli_editor), { description = "Open CLI editor" })
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(gui_editor), { description = "Open GUI editor" })
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("spotify-launcher"), { description = "Open Spotify" })
+-- hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("spotify-launcher"), { description = "Open Spotify" })
+
+
+-- ============================================================
+-- ======                  UTILITIES                     ======
+-- ============================================================
+hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("~/.config/hypr/rofi-shortcuts.sh"), { description = "Show keybindings" })
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(menu), { description = "Open Application launcher" })
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("rofi -show window"), { description = "Open window switcher" })
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("~/.config/waybar/rofi-cliphist.sh"),
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("~/.config/waybar/rofi-cliphist.sh"),
     { description = "Open clipboard manager" })
-hl.bind(mainMod .. " + CTRL + L", hl.dsp.exec_cmd("~/.config/waybar/rofi-power-menu.sh"),
+hl.bind(mainMod .. " + ESCAPE ", hl.dsp.exec_cmd("~/.config/waybar/rofi-power-menu.sh"),
     { description = "Start Power Menu" })
+local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { description = "Close window" })
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(screenLocker), { description = "Lock screen" })
 
 
 -- ============================================================
@@ -54,10 +58,6 @@ hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("kitty hyprctl reload"), { de
 hl.bind(mainMod .. " + ALT + R", hl.dsp.exec_cmd("kitty killall waybar && nohup waybar &"),
     { description = "Restarts Waybar" })
 hl.bind(mainMod .. " + 0", hl.dsp.exec_cmd("kitty nohup waybar &"), { description = "Start Waybar" })
-
-
--- TODO: Add auto-generate shortcuts from this file
---hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("~/.config/hypr/generate-shortcuts.sh"))
 
 
 -- ============================================================
@@ -111,7 +111,7 @@ hl.bind(mainMod .. " + ALT + Right", hl.dsp.exec_cmd("hyprctl dispatch moveintom
 hl.bind(mainMod .. " + ALT + Left", hl.dsp.exec_cmd("hyprctl dispatch moveintomonitorscreen prev"),
     { description = "Move active window to previous monitor" })
 
-hl.bind(mainMod .. " + U", hl.dsp.workspace.toggle_special("magic"), { description = "Toggle special workspace magic" })
+hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"), { description = "Toggle special workspace magic" })
 
 
 
@@ -128,16 +128,19 @@ hl.bind(mainMod .. " + CTRL + down", hl.dsp.window.resize({ x = 0, y = 100, rela
 hl.bind(mainMod .. " + CTRL + up", hl.dsp.window.resize({ x = 0, y = -100, relative = true }), { repeating = true },
     { description = "Reduce window height with keyboard" })
 
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle floating window" })
+-- Floating window
+hl.bind(mainMod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle floating window" })
 
+-- Fullscreen
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
     { description = "Toggle Fullscreen" })
-hl.bind(mainMod .. " + M", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }),
+hl.bind(mainMod .. " + P", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }),
     { description = "Toggle Maximize Window" })
 
--- Toggle split
+-- Split windows
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"), { description = "Toggle split" })
 hl.bind(mainMod .. " + G", hl.dsp.group.toggle(), { description = "Toggle window group" })
+hl.bind(mainMod .. " + K", hl.dsp.layout("swapsplit"), { description = "Swapsplit" })
 
 
 -- ============================================================
@@ -152,43 +155,13 @@ hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true, descrip
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true, description = "Resize window with the mouse" })
 
 
-
-
 -- ============================================================
 -- ======              KEYBINDINGS LAYOUT                ======
 -- ============================================================
--- FIXME: changing layout with keybindings, and show it on waybar
+-- TODO: changing layout with keybindings, and show current layout on waybar
 -- hl.bind(mainMod .. " + F1", hl.dsp.exec_cmd("hyprctl dispatch setlayout dwindle"))
 -- hl.bind(mainMod .. " + F2", hl.dsp.exec_cmd("hyprctl dispatch setlayout master"))
 -- hl.bind(mainMod .. " + F3", hl.dsp.exec_cmd("hyprctl dispatch setlayout next"))
-
-
-
-
--- FIXME: Rsize windows in Hyprland
--- ============================================================
--- ======             KEYBINDINGS RESISING               ======
--- ============================================================
--- Resize window right (increase width)
--- hl.bind(mainMod .. " + CTRL + right", function()
--- hl.dispatch("resizeactive", "50 0")
--- end)
---
--- -- Resize window left (decrease width)
--- hl.bind(mainMod .. " + CTRL + left", function()
--- hl.dispatch("resizeactive", "-50 0")
--- end)
---
--- -- Resize window up (decrease height)
--- hl.bind(mainMod .. " + CTRL + up", function()
--- hl.dispatch("resizeactive", "0 -50")
--- end)
---
--- -- Resize window down (increase height)
--- hl.bind(mainMod .. " + CTRL + down", function()
--- hl.dispatch("resizeactive", "0 50")
--- end)
-
 
 
 -- ============================================================
@@ -209,8 +182,6 @@ hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("hyprshot -m window -f $(date +%Y%m%d
 -- Screenshot selected region → copy to clipboard
 hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m region -c"),
     { description = "Screenshot selected region and copy to clipboard" })
-
-
 
 
 -- ============================================================
@@ -240,14 +211,3 @@ hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brillo -q -u 300000 -A 5"),
     { locked = true, repeating = true, description = "Increase brightness" })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brillo -q -u 300000 -U 5"),
     { locked = true, repeating = true, description = "Decrease brightness" })
-
-
--- TODO: add more keyboard shortcuts, calculator, screenshort, and so on
-
--- Cycle through workspaces like A lt+Tab
---hl.bind(mainMod .. " + TAB",        hl.dsp.focus({ workspace = "previous" }))
---hl.bind(mainMod .. " + SHIFT + TAB", hl.dsp.focus({ workspace = "next" }))
-
--- Cycle through windows in current workspace
---hl.bind("ALT + TAB",       hl.dsp.focus({ window = "next" }))
---hl.bind("ALT + SHIFT + TAB", hl.dsp.focus({ window = "prev" }))

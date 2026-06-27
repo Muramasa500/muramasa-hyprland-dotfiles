@@ -98,8 +98,13 @@ if [[ "$TERM" != "dumb" ]]; then
     # =====================================================
     # Bat colorized
     alias ghi='bat <(gh issue view "$@")'
+
+    # FIXME: gh completion not working
     # completion
-    source <(gh completion -s zsh) >> ~/.zshrc
+    # source <(gh completion -s zsh) >> ~/.zshrc
+    # mkdir -p ~/.local/share/zsh/completion
+    # gh completion -s zsh > ~/.local/share/zsh/completion/_gh
+
     # fzf integration
     alias ghr='gh pr list | fzf --reverse --preview "gh pr view {}"'
 
@@ -111,7 +116,6 @@ if [[ "$TERM" != "dumb" ]]; then
     # Ctrl+R: Search command history
     # Ctrl+T: Fuzzy search and insert file paths
     # Alt+C: Fuzzy search directories and change into them
-    # TODO: add prompt to lower part of fzf window, instead of top, and alt+c clashes with alt+c from hyprland
     # TODO: added chafa from pacman, add preview of images in terminal, had ghost image in last test
     if command -v fzf &> /dev/null; then
         # Commands
