@@ -242,7 +242,7 @@ Feel free to fork and modify! I am not accepting PRs back to main, but issues ar
 
 ## License
 
-MIT License - See LICENSE file for details.
+![License](https://img.shields.io/github/license/yourusername/repo-name?style=flat-square)
 
 ---
 
