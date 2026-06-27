@@ -18,8 +18,10 @@ These configurations cover the complete desktop experience—from window managem
 	<img alt="Top Language" src="https://img.shields.io/github/languages/top/Muramasa500/muramasa-hyprland-dotfiles?style=for-the-badge">
 </p>
 
-
-
+<p align="center">
+  <img src="screenshots/desktop1.png" alt="Muramasa's Dotfiles" width="100%">
+  <img src="screenshots/desktop2.png" alt="Muramasa's Dotfiles" width="100%">
+</p>
 
 ## Overview
 
