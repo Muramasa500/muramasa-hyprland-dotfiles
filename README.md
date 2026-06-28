@@ -227,10 +227,9 @@ sudo pacman -S \
 - [Thunar](https://docs.xfce.org/apps/thunar/start) - XFCE file manager
 - [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) - Notification daemon
 
-#### Themes / assets
+#### Themes
 - [Catppuccin](https://github.com/catppuccin) - Color themes
 - [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts) - Icon/font patching
-- [Jluttine/Rofi-Power-Menu](https://github.com/jluttine/rofi-power-menu) - Power menu script
 
 #### Utilities
 - [Cliphist](https://github.com/chromey/cliphist) - Clipboard history manager
@@ -238,6 +237,7 @@ sudo pacman -S \
 - [Flameshot](https://github.com/flameshot-org/flameshot) - Screenshot utility
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch) - System information display
 - [Starship](https://github.com/starship/starship) - Cross-shell prompt
+- [Jluttine/Rofi-Power-Menu](https://github.com/jluttine/rofi-power-menu) - Power menu script
 - [Slurp](https://github.com/emersion/slurp) - Selection tool for screenshots
 
 
