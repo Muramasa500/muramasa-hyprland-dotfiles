@@ -28,6 +28,9 @@ hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
 hl.env("XWAYLAND_FORCE_TRUE_COLOR", "1")
 hl.env("WLR_DRM_NO_ATOMIC", "1")
 
+-- Enable dead keys for ghostty
+--hl.env("GTK_IM_MODULE", "simple ghostty")
+
 
 -- ============================================================
 -- ======                  DEBUG MODE                    ======

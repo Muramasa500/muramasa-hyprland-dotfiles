@@ -6,7 +6,9 @@
 -- ======           PROGRAMS (VARIABLES)                 ======
 -- ============================================================
 local mainMod = "SUPER"
-local terminal = "kitty"
+-- local terminal = "kitty"
+-- HACK: Set GTK_IM_MODULE to simple to be able to write ~ in ghostty. This is an issue with GTK 4.2x.
+local terminal = "GTK_IM_MODULE=simple ghostty"
 local fileManager = "thunar"
 local menu = "rofi -show drun -display-drun ''"
 local screenLocker = "hyprlock"
@@ -14,6 +16,7 @@ local browser = "firefox"
 local calculator = "qalculate-gtk"
 local gui_editor = "zeditor"
 -- local cli_editor = "kitty nvim"
+
 
 
 -- ============================================================
