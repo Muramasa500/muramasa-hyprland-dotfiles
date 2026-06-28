@@ -37,7 +37,7 @@ This is an early work-in-progress. Configs may be incomplete, and the install sc
 <img alt="Bar" src="https://img.shields.io/badge/Bar-Waybar-131C2A?style=for-the-badge">
 <img alt="Theme" src="https://img.shields.io/badge/Theme-Catppuccin%20Macchiato-CAD3F5?style=for-the-badge&logo=catppuccin&logoColor=white">
 <img alt="Terminal" src="https://img.shields.io/badge/Terminal-Kitty-3551F3?style=for-the-badge">
-<img alt="Shell" src="https://img.shields.io/badge/Shell-zsh-F48FB2?style=for-the-badge">
+<img alt="Shell" src="https://img.shields.io/badge/Shell-zsh-F15A24?style=for-the-badge&logo=zsh&logoColor=white">
 <img alt="Launcher" src="https://img.shields.io/badge/Launcher-rofi-E9E5CA?style=for-the-badge">
 <img alt="Editor" src="https://img.shields.io/badge/Editor-Zed-084CCF?style=for-the-badge&logo=zedindustries&logoColor=white">
 <img alt="File Manager" src="https://img.shields.io/badge/File_Manager-Thunar-288B97?style=for-the-badge">
@@ -156,7 +156,7 @@ cp -r gtk-3.0 /.config/* ~/.config/
 | `Super + Tab` | Open Rofi window switcher |
 | `Super + F` | Full screen |
 
-*(Check `~/.config/hypr/hyprland.lua` for full list)*
+*(Check `~/.config/hypr/hypr-shortcuts.lua` for full list)*
 
 
 
