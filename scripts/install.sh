@@ -98,6 +98,7 @@ PACKAGES=(
     "thunar-media-tags-plugin"
     "thunar-vcs-plugin"
     "thunar-volman"
+    "sudo-rs"
     "neovim"
     "qalculate-gtk"
     "brightnessctl"

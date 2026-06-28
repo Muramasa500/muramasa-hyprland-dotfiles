@@ -195,8 +195,8 @@ sudo pacman -S \
   zsh-autosuggestions zsh-history-substring-search \
   zsh-syntax-highlighting slurp eza dust fd bat \
   ripgrep procs fzf zoxide btop thunar direnv zed \
-  qalculate-gtk brightnessctl fastfetch flameshot \
-  network-manager-applet
+  qalculate-gtk brightnessctl fastfetch sudo-rs  \
+  network-manager-applet flameshot
   ```
 
 ## ⚠️ Hardware Notes
@@ -215,6 +215,8 @@ sudo pacman -S \
 - [HyprIdle](https://github.com/hyprwm/hypridle) - Session idle management
 - [HyprLock](https://github.com/hyprwm/hyprlock) - Screen locking
 - [HyprPaper](https://github.com/hyprwm/hyprpaper) - Wallpaper management
+- [HyprPolkitAgent](https://github.com/hyprwm/hyprpolkitagent) - Polkit authentication agent
+- [HyprSunset](https://github.com/hyprwm/hyprsunset) - Blue light filter
 - [XDG Desktop Portal Hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) - Integration layer
 
 #### Core Applications
@@ -223,7 +225,6 @@ sudo pacman -S \
 - [Ghostty](https://github.com/ghostty-org/ghostty) - GPU-accelerated terminal
 - [Zed](https://github.com/zed-industries/zed) - Rust-based text editor
 - [Thunar](https://docs.xfce.org/apps/thunar/start) - XFCE file manager
-- [Rofi-wayland](https://github.com/lbonn/rofi) - Wayland-compatible rofi fork
 - [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) - Notification daemon
 
 #### Themes / assets
