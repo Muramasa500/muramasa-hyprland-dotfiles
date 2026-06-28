@@ -56,11 +56,10 @@ PACKAGES=(
     "hyprlock"
     "hypridle"
     "hyprpaper"
-    "hyprshot"
     "hyprsunset"
     "waybar"
     "rofi-wayland"
-    "kitty"
+    "ghostty"
     "swaync"
     "zsh"
     "starship"
@@ -103,6 +102,7 @@ PACKAGES=(
     "qalculate-gtk"
     "brightnessctl"
     "direnv"
+    "flameshot"
 )
 
 # Install only missing packages
@@ -122,10 +122,16 @@ fi
 
 echo "✅ Dependencies installed!"
 
+echo "📥 Get rofi-power-menu from github"
+sudo curl -o /usr/local/bin/rofi-power-menu https://raw.githubusercontent.com/jluttine/rofi-power-menu/master/rofi-power-menu
+sudo chmod +x /usr/local/bin/rofi-power-menu
+echo "✅ Package installed!"
+
 
 # 5. Install complete
 echo ""
 echo "📋 Post-install steps:"
 echo "  1. Create ~/.config/weather-app/geolocation with your coordinates"
-echo "  2. Download rofi-power-menu (see README)"
+echo "  2. Change monitor setup on hyprland"
+echo "  3. It is configured to use dkms Nvidia drivers from AUR, change configuration if needed."
 echo "✅ Installation complete! Reboot or start Hyprland."

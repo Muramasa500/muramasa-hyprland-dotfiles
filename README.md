@@ -113,6 +113,8 @@ chmod +x install.sh
 
 ```bash
 git clone git@github.com:Muramasa500/muramasa500-hyprland-dotfiles~/	dotfiles
+sudo curl -o /usr/local/bin/rofi-power-menu https://raw.githubusercontent.com/jluttine/rofi-power-menu/master/rofi-power-menu
+sudo chmod +x /usr/local/bin/rofi-power-menu
 sudo pacman -S stow
 cd ~/dotfiles
 stow fastfetch gtk-3.0 hyprland kitty qt6ct rofi starship waybar weather-app zed zsh
@@ -121,6 +123,8 @@ stow fastfetch gtk-3.0 hyprland kitty qt6ct rofi starship waybar weather-app zed
 
 ### Option 3: Manual Setup
 ```bash
+sudo curl -o /usr/local/bin/rofi-power-menu https://raw.githubusercontent.com/jluttine/rofi-power-menu/master/rofi-power-menu
+sudo chmod +x /usr/local/bin/rofi-power-menu
 cp -r btop/.config/* ~/.config/
 cp -r fastfetch/.config/* ~/.config/
 cp -r gtk-3.0 /.config/* ~/.config/
@@ -170,11 +174,9 @@ Files NOT in this repo (ignored):
 
 After cloning, you must:
 1. Create ~/.config/weather-app/geolocation with your own coordinates.
-2. Get rofi-power-menu:
-```bash
-sudo curl -o /usr/local/bin/rofi-power-menu https://raw.githubusercontent.com/jluttine/rofi-power-menu/master/rofi-power-menu
-sudo chmod +x /usr/local/bin/rofi-power-menu
-```
+2. Change monitor setup on hyprland (it is currently configured for 3 monitors)
+3. It is configured to use dkms Nvidia drivers from AUR, change configuration if needed.
+
 
 ## Dependencies
 
@@ -183,8 +185,8 @@ Install required packages:
 ```bash
 sudo pacman -S \
   hyprland xdg-desktop-portal-hyprland hyprpolkitagent hyprlock \
-  hypridle hyprpaper hyprshot hyprsunset cliphist wl-clipboard xclip btop \
-  waybar rofi-wayland kitty swaync gnome-keyring libsecret \
+  hypridle hyprpaper hyprsunset cliphist wl-clipboard xclip btop \
+  waybar rofi-wayland ghostty swaync gnome-keyring libsecret \
   zsh starship jq curl playerctl pavucontrol \
   gvfs-mtp glib-networking polkit-gnome \
   networkmanager network-manager-applet \
@@ -193,7 +195,7 @@ sudo pacman -S \
   zsh-autosuggestions zsh-history-substring-search \
   zsh-syntax-highlighting slurp eza dust fd bat \
   ripgrep procs fzf zoxide btop thunar direnv zed \
-  qalculate-gtk brightnessctl fastfetch
+  qalculate-gtk brightnessctl fastfetch flameshot
   ```
 
 ## ⚠️ Hardware Notes
