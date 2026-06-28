@@ -58,7 +58,7 @@ PACKAGES=(
     "hyprpaper"
     "hyprsunset"
     "waybar"
-    "rofi-wayland"
+    "rofi"
     "ghostty"
     "swaync"
     "zsh"

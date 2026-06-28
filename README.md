@@ -186,7 +186,7 @@ Install required packages:
 sudo pacman -S \
   hyprland xdg-desktop-portal-hyprland hyprpolkitagent hyprlock \
   hypridle hyprpaper hyprsunset cliphist wl-clipboard xclip btop \
-  waybar rofi-wayland ghostty swaync gnome-keyring libsecret \
+  waybar rofi ghostty swaync gnome-keyring libsecret \
   zsh starship jq curl playerctl pavucontrol \
   gvfs-mtp glib-networking polkit-gnome \
   networkmanager network-manager-applet \
@@ -216,12 +216,11 @@ sudo pacman -S \
 - [HyprLock](https://github.com/hyprwm/hyprlock) - Screen locking
 - [HyprPaper](https://github.com/hyprwm/hyprpaper) - Wallpaper management
 - [XDG Desktop Portal Hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) - Integration layer
-- [HyprShot](https://github.com/Gustash/hyprshot) - Screenshot utility
 
 #### Core Applications
 - [Waybar](https://github.com/Alexays/Waybar) - Status bar
 - [Rofi](https://github.com/davatorium/rofi) - Application launcher
-- [Kitty](https://github.com/kovidgoyal/kitty) - GPU-accelerated terminal
+- [Ghostty](https://github.com/ghostty-org/ghostty) - GPU-accelerated terminal
 - [Zed](https://github.com/zed-industries/zed) - Rust-based text editor
 - [Thunar](https://docs.xfce.org/apps/thunar/start) - XFCE file manager
 - [Rofi-wayland](https://github.com/lbonn/rofi) - Wayland-compatible rofi fork
@@ -235,6 +234,7 @@ sudo pacman -S \
 #### Utilities
 - [Cliphist](https://github.com/chromey/cliphist) - Clipboard history manager
 - [Btop](https://github.com/arista-nos/btop) - Resource monitor
+- [Flameshot](https://github.com/flameshot-org/flameshot) - Screenshot utility
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch) - System information display
 - [Starship](https://github.com/starship/starship) - Cross-shell prompt
 - [Slurp](https://github.com/emersion/slurp) - Selection tool for screenshots
