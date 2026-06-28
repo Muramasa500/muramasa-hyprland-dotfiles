@@ -17,6 +17,13 @@ hl.config({
 })
 
 
+
+-- In Lua config
+os.execute('export TERM_TERMINAL=ghostty')
+-- Or define as a constant
+local terminal = "ghostty"
+
+
 -- ============================================================
 -- ======              ENVIRONMENT VARIABLES             ======
 -- ============================================================
@@ -52,6 +59,14 @@ hl.env("WLR_DRM_NO_ATOMIC", "1")
 -- ======                AUTOSTART                       ======
 -- ============================================================
 hl.on("hyprland.start", function()
+    -- Export variables systemd
+    -- hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+
+    -- -- Restart portals
+    -- hl.exec_cmd("systemctl --user stop xdg-desktop-portal xdg-desktop-portal-hyprland")
+    -- hl.exec_cmd("systemctl --user start xdg-desktop-portal-hyprland xdg-desktop-portal")
+
+
     -- Kill any existing portal instances to prevent conflict
     hl.exec_cmd("killall -9 xdg-desktop-portal || true")
     -- Start only the Hyprland portal
@@ -89,15 +104,15 @@ end)
 -- ======                WORKSPACE RULES                 ======
 -- ============================================================
 hl.workspace_rule({ workspace = "1", monitor = "DP-1", persistent = true, default = true })
-hl.workspace_rule({ workspace = "2", monitor = "DP-1", persistent = true })
+hl.workspace_rule({ workspace = "2", monitor = "DP-1", persistent = false })
 -- hl.workspace_rule({ workspace = "2", monitor = "DP-1", persistent = true})
 
 hl.workspace_rule({ workspace = "3", monitor = "DP-2", persistent = true, default = true })
-hl.workspace_rule({ workspace = "4", monitor = "DP-2", persistent = true })
+hl.workspace_rule({ workspace = "4", monitor = "DP-2", persistent = false })
 -- hl.workspace_rule({ workspace = "4", monitor = "DP-2", persistent = true})
 
 hl.workspace_rule({ workspace = "5", monitor = "HDMI-A-1", persistent = true, default = true })
-hl.workspace_rule({ workspace = "6", monitor = "HDMI-A-1", persistent = true })
+hl.workspace_rule({ workspace = "6", monitor = "HDMI-A-1", persistent = false })
 -- hl.workspace_rule({ workspace = "6", monitor = "HDMI-A-1", persistent = true})
 
 

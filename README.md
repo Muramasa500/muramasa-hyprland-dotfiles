@@ -82,9 +82,9 @@ This configuration uses the following third-party assets:
 ~/dotfiles/
 ├── btop             # btop config
 ├── fastfetch        # Fastfetch config
+├── ghostty/         # Ghostty terminal config
 ├── gtk-3.0/         # gtk config / themes
 ├── hyprland/        # Hyprland config (hyprland.lua)
-├── kitty/           # Kitty terminal config
 ├── qt6ct/           # qt6 config / themes
 ├── rofi/            # Rofi config
 ├── screenshots/     # Screenshots
@@ -195,7 +195,8 @@ sudo pacman -S \
   zsh-autosuggestions zsh-history-substring-search \
   zsh-syntax-highlighting slurp eza dust fd bat \
   ripgrep procs fzf zoxide btop thunar direnv zed \
-  qalculate-gtk brightnessctl fastfetch flameshot
+  qalculate-gtk brightnessctl fastfetch flameshot \
+  network-manager-applet
   ```
 
 ## ⚠️ Hardware Notes

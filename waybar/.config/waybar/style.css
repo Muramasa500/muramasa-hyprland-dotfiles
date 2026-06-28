@@ -61,9 +61,9 @@ tooltip {
 #workspaces button {
     background-color: rgba(55, 55, 55, 0.9);
     color: #cad3f5;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
-    padding: 2px 12px 2px 8px;
+    padding: 2px 13px 2px 8px;
     border-radius: 0;
     transition: all 0.2s ease;
     border-right: 1px solid rgba(0, 0, 0, 0.3);

@@ -135,7 +135,7 @@
   // ============================================================
   "wlr/taskbar": {
     "format": "{icon}",
-    "icon-size": 32,
+    "icon-size": 28,
     "icon-theme": "Papirus",
     "all-outputs": true,
     "tooltip": true,
@@ -201,10 +201,16 @@
   },
 
   // Show CPU usage
-  "cpu": { "format": "{usage}% " },
+  "cpu": {
+    "format": "{usage}% ",
+    "on-click": "ghostty -e btop",
+  },
 
   // Show memory usage
-  "memory": { "format": "{}% " },
+  "memory": {
+    "format": "{}% ",
+    "on-click": "ghostty -e btop",
+  },
 
   // TODO: is it possible to show several network interfaces?
   "network": {
@@ -214,11 +220,14 @@
     "format-ethernet": "󰈀",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": "{bandwidthUpBytes}/{bandwidthDownBytes}",
+    // "tooltip-format-wifi": "{essid} ({signalStrength}%) \nDownload: {bandwidthDownBytes}\nUpload: {bandwidthUpBytes}",
+    // "tooltip-format-wifi": "{essid} ({signalStrength}%) \n↓ {bandwidthDownKiB}/s ↑ {bandwidthUpKiB}/s",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname}: {bandwidthUpBytes}/{bandwidthDownBytes}",
     "tooltip-format-disconnected": "󰈂",
     "max-length": 40,
     "interval": 1,
+    "on-click": "nm-connection-editor",
   },
 
   // TODO: want to add a drop down menu (floating) of pavucontrol if possible
@@ -288,6 +297,9 @@
     "format": "{:%H:%M\n%Y/%m/%d}",
     "format-alt": "{:%A\n%B %d, %Y} ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    // TODO: Opening calendear does not work
+    //"on-click": "org.gnome.Calendar",
+    "on-click-right": "date",
     "calendar": {
       "mode": "year",
       "mode-mon-col": 3,
