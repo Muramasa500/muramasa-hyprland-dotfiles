@@ -50,7 +50,9 @@ hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(screenLocker), { description = "Lock 
 hl.bind(mainMod .. " + X",
     hl.dsp.exec_cmd(gui_editor ..
         " + .config/waybar/config.jsonc &&" .. gui_editor .. " + .config/waybar/style.css &&" ..
-        gui_editor .. " + ~/.config/hypr/hypr-shortcuts.lua &&" .. gui_editor .. " + ~/.config/hypr/hyprland.lua"),
+        gui_editor .. " + ~/.config/hypr/hypr-shortcuts.lua &&" .. gui_editor .. " + ~/.config/hypr/hyprland.lua &&"
+        .. gui_editor ..
+        " + ~/.config/hypr/hypr-styling.lua &&" .. gui_editor .. " + ~/.config/hypr/hypr-window-rules.lua"),
     { description = "Open Hyprland & Waybar configs" })
 -- Reload hyprland
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("kitty hyprctl reload"), { description = "Restart Hyprland" })
@@ -167,21 +169,25 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true, descr
 -- ============================================================
 -- ======               TAKE SCREENSHOTS                 ======
 -- ============================================================
+hl.bind("SUPER + P", hl.dsp.exec_cmd("flameshot gui"),
+    { description = "Screenshot with Flameshot" })
+
 -- Screenshot entire screen → save to file
-hl.bind("SUPER + CTRL + P", hl.dsp.exec_cmd("hyprshot -m output -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),
-    { description = "Screenshot entire screen" })
+-- hl.bind("SUPER + CTRL + P", hl.dsp.exec_cmd("hyprshot -m output -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),
+--     { description = "Screenshot entire screen" })
 
--- Screenshot selected region → save to file
-hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("hyprshot -m region -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),
-    { description = "Screenshot selected region" })
+-- -- Screenshot selected region → save to file
+-- hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("hyprshot -m region -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),
+--     { description = "Screenshot selected region" })
 
--- Screenshot active window → save to file
-hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("hyprshot -m window -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),
-    { description = "Screenshot active window" })
+-- -- Screenshot active window → save to file
+-- hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("hyprshot -m window -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),
+--     { description = "Screenshot active window" })
 
--- Screenshot selected region → copy to clipboard
-hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m region -c"),
-    { description = "Screenshot selected region and copy to clipboard" })
+-- -- Screenshot selected region → copy to clipboard
+-- hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprshot -m region -c"),
+--     { description = "Screenshot selected region and copy to clipboard" })
+
 
 
 -- ============================================================

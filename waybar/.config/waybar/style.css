@@ -50,7 +50,6 @@ tooltip {
 /* ---------------------------------------- */
 /* -----          WORKSPACES          ----- */
 /* ---------------------------------------- */
-
 #workspaces {
     background-color: transparent;
     border: none;
@@ -62,21 +61,20 @@ tooltip {
 #workspaces button {
     background-color: rgba(55, 55, 55, 0.9);
     color: #cad3f5;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: bold;
-    padding: 2px 10px 2px 10px;
+    padding: 2px 12px 2px 8px;
     border-radius: 0;
     transition: all 0.2s ease;
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     border-left: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 4px solid rgba(136, 57, 239, 0.3);
-    min-width: 35px;
+    border-bottom: 4px solid rgba(55, 55, 55, 0.3);
+    min-width: 30px;
 }
 
 /* ======================================== */
 /* -----          ACTIVE COLORS       ----- */
 /* ======================================== */
-
 #workspaces button.active {
     font-weight: 700;
     color: #cad3f5;
@@ -215,7 +213,7 @@ tooltip {
     border-radius: 12px;
 }*/
 
-/* Taskbar - all open windows as icons in center */
+/* Show programs as icons in center */
 #taskbar {
     padding: 1px 8px;
     margin: 3px 3px;
