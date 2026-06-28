@@ -70,7 +70,7 @@ tooltip {
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     border-left: 1px solid rgba(0, 0, 0, 0.3);
     border-bottom: 4px solid rgba(136, 57, 239, 0.3);
-    min-width: 55px;
+    min-width: 35px;
 }
 
 /* ======================================== */
@@ -136,7 +136,7 @@ tooltip {
 /* -----       GENERAL MODULES        ----- */
 /* ---------------------------------------- */
 #custom-menu,
-#window,
+/*#window,*/
 #custom-weather,
 #mpris,
 #cpu,
@@ -155,7 +155,7 @@ tooltip {
     color: #cad3f5;
 }
 
-#window:hover,
+/*#window:hover,*/
 #custom-weather:hover,
 #cpu:hover,
 #memory:hover,
@@ -198,7 +198,7 @@ tooltip {
 /* ---------------------------------------- */
 /* -----        MIDDLE MODULES        ----- */
 /* ---------------------------------------- */
-#window {
+/*#window {
     background-color: rgba(91, 96, 120, 0.3);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
@@ -213,6 +213,36 @@ tooltip {
 #window:hover {
     background-color: rgba(147, 153, 178, 0.3);
     border-radius: 12px;
+}*/
+
+/* Taskbar - all open windows as icons in center */
+#taskbar {
+    padding: 1px 8px;
+    margin: 3px 3px;
+    background-color: rgba(91, 96, 120, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    /*border: 2px solid rgba(202, 211, 245, 0.5);*/
+}
+
+#taskbar button {
+    padding: 2px 4px;
+    margin: 0 2px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+#taskbar button:hover {
+    background-color: rgba(147, 153, 178, 0.3);
+}
+
+#taskbar button.active {
+    background-color: rgba(114, 135, 253, 0.4);
+    /*border-bottom: 2px solid #72b1fd;*/
+}
+
+#taskbar image {
+    margin: 0 2px;
 }
 
 /* ---------------------------------------- */

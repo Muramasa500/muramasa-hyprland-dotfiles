@@ -6,7 +6,7 @@
 -- ======           PROGRAMS (VARIABLES)                 ======
 -- ============================================================
 local mainMod = "SUPER"
-local terminal = "kitty"
+local terminal = "GTK_IM_MODULE=simple ghostty"
 local fileManager = "thunar"
 local menu = "rofi -show drun -display-drun ''"
 local screenLocker = "hyprlock"
