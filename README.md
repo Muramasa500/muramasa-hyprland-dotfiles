@@ -224,16 +224,16 @@ sudo pacman -S \
 - [Rofi](https://github.com/davatorium/rofi) - Application launcher
 - [Ghostty](https://github.com/ghostty-org/ghostty) - GPU-accelerated terminal
 - [Zed](https://github.com/zed-industries/zed) - Rust-based text editor
-- [Thunar](https://docs.xfce.org/apps/thunar/start) - XFCE file manager
-- [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) - Notification daemon
+
 
 #### Themes
 - [Catppuccin](https://github.com/catppuccin) - Color themes
 - [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts) - Icon/font patching
 
 #### Utilities
-- [Cliphist](https://github.com/chromey/cliphist) - Clipboard history manager
-- [Btop](https://github.com/arista-nos/btop) - Resource monitor
+- [Cliphist](https://github.com/sentriz/cliphist) - Clipboard history manager
+- [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) - Notification daemon
+- [Btop](https://github.com/aristocratos/btop) - Resource monitor
 - [Flameshot](https://github.com/flameshot-org/flameshot) - Screenshot utility
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch) - System information display
 - [Starship](https://github.com/starship/starship) - Cross-shell prompt
