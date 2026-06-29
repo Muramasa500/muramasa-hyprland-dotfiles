@@ -203,13 +203,13 @@
   // Show CPU usage
   "cpu": {
     "format": "{usage}% ",
-    "on-click": "ghostty -e btop",
+    "on-click": "~/.config/waybar/launch-btop.sh",
   },
 
   // Show memory usage
   "memory": {
     "format": "{}% ",
-    "on-click": "ghostty -e btop",
+    "on-click": "~/.config/waybar/launch-btop.sh",
   },
 
   // TODO: is it possible to show several network interfaces?

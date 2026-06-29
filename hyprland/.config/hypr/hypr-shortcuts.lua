@@ -169,8 +169,23 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true, descr
 -- ============================================================
 -- ======               TAKE SCREENSHOTS                 ======
 -- ============================================================
-hl.bind("SUPER + P", hl.dsp.exec_cmd("flameshot gui"),
-    { description = "Screenshot with Flameshot" })
+-- Capture a region (drag to select)
+hl.bind(mainMod .. " + P",
+    hl.dsp.exec_cmd("hyprshot -m region output -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),
+    { description = "Screenshot a region (drag to select)" })
+-- Capture the focused window
+hl.bind(mainMod .. " + SHIFT + P",
+    hl.dsp.exec_cmd("hyprshot -m window output -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),
+    { description = "Screenshot the focused window" })
+-- Capture the active monitor
+hl.bind(mainMod .. " + CTRL + P",
+    hl.dsp.exec_cmd("hyprshot -m output output -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),
+    { description = "Screenshot the active monitor" })
+-- Capture region, clipboard only (no file saved)
+hl.bind(mainMod .. " + ALT + P",
+    hl.dsp.exec_cmd("hyprshot -m region --clipboard-only output -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),
+    { description = "Screenshot a region (drag to select), clipboard only" })
+
 
 -- Screenshot entire screen → save to file
 -- hl.bind("SUPER + CTRL + P", hl.dsp.exec_cmd("hyprshot -m output -f $(date +%Y%m%d_%H%M%S) -o ~/Pictures/Screenshots"),

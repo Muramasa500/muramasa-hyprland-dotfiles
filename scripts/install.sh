@@ -103,7 +103,7 @@ PACKAGES=(
     "qalculate-gtk"
     "brightnessctl"
     "direnv"
-    "flameshot"
+    "hyprshot"
 )
 
 # Install only missing packages

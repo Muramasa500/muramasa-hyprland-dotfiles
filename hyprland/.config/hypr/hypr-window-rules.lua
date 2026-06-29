@@ -61,7 +61,7 @@ hl.window_rule({
     match = { class = "firefox", title = "Library" },
     float = true,
     center = true,
-    size = { 800, 600 },
+    size = { 1100, 900 },
     opacity = "0.9 0.9",
 })
 
@@ -106,15 +106,43 @@ hl.window_rule({
 })
 
 
-
-
-
 hl.window_rule({
-    match = {
-        class = "kitty", title = "btop"
-    },
+    match = { class = "thunar", title = "^Rename .*$" },
     float = true,
     center = true,
     size = { 800, 600 },
+    opacity = "0.9 0.9",
+})
+
+
+
+
+-- TODO: btop and htop as floating windows
+-- hl.window_rule({
+--     match = {
+--         class = "com.mitchellh.ghostty", title = "btop"
+--     },
+--     float = true,
+--     center = true,
+--     size = { 800, 600 },
+--     opacity = "0.9 0.9",
+-- })
+
+
+-- hl.window_rule({
+--     match = {
+--         class = "com.mitchellh.ghostty", title = "htop"
+--     },
+--     float = true,
+--     center = true,
+--     size = { 800, 600 },
+--     opacity = "0.9 0.9",
+-- })
+
+hl.window_rule({
+    match = { title = "btop" },
+    float = true,
+    center = true,
+    size = { 1000, 800 },
     opacity = "0.9 0.9",
 })

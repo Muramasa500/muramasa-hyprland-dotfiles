@@ -16,14 +16,6 @@ hl.config({
     }
 })
 
-
-
--- In Lua config
-os.execute('export TERM_TERMINAL=ghostty')
--- Or define as a constant
-local terminal = "ghostty"
-
-
 -- ============================================================
 -- ======              ENVIRONMENT VARIABLES             ======
 -- ============================================================

@@ -9,15 +9,14 @@
 }
 
 window#waybar {
-    background-color: rgba(28, 28, 38, 0.92);
-    margin: 10px 30px;
-    padding: 3px 6px;
+    background-color: rgba(35, 35, 35, 0.9);
+    margin: 20px 40px;
+    padding: 4px 6px;
     color: #cad3f5;
-    border-radius: 18px;
-    border: 1px solid rgba(202, 211, 245, 0.08);
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    /*border-radius: 18px;*/
+    /*border: 20px;
+    border-width: 20px;*/
+    /*border-color: black;*/
 }
 
 /* ---------------------------------------- */
@@ -60,12 +59,11 @@ tooltip {
 }
 
 #workspaces button {
-    /*background-color: rgba(55, 55, 55, 0.9);*/
-    background-color: rgba(45, 45, 55, 0.9);
+    background-color: rgba(55, 55, 55, 0.9);
     color: #cad3f5;
     font-size: 17px;
     font-weight: bold;
-    padding: 2px 15px 2px 8px;
+    padding: 2px 13px 2px 8px;
     border-radius: 0;
     transition: all 0.2s ease;
     border-right: 1px solid rgba(0, 0, 0, 0.3);
@@ -148,9 +146,9 @@ tooltip {
 #language,
 #clock,
 #custom-power {
-    border: 1px solid transparent;
+    border: none;
     font-weight: bold;
-    transition: all 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s;
     background-color: rgba(0, 0, 0, 0);
     color: #cad3f5;
 }
@@ -164,12 +162,8 @@ tooltip {
 #custom-cliphist:hover,
 #language:hover,
 #clock:hover {
-    background-color: rgba(114, 135, 253, 0.12);
+    background-color: rgba(147, 153, 178, 0.3);
     border-radius: 10px;
-    border: 1px solid rgba(114, 135, 253, 0.28);
-    box-shadow:
-        0 0 14px rgba(114, 135, 253, 0.14),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 /* ---------------------------------------- */
@@ -202,49 +196,47 @@ tooltip {
 /* ---------------------------------------- */
 /* -----        MIDDLE MODULES        ----- */
 /* ---------------------------------------- */
+/*#window {
+    background-color: rgba(91, 96, 120, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border: 2px solid rgba(202, 211, 245, 0.5);
+    color: #cad3f5;
+    padding: 1px 12px;
+    margin: 5px 3px;
+    font-size: 16px;
+    font-weight: bold;
+}
 
+#window:hover {
+    background-color: rgba(147, 153, 178, 0.3);
+    border-radius: 12px;
+}*/
+
+/* Show programs as icons in center */
 #taskbar {
-    padding: 1px 6px;
-    margin: 2px 3px;
-    background-color: rgba(55, 58, 82, 0.35);
-    box-shadow:
-        0 4px 16px rgba(0, 0, 0, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
-    border-radius: 14px;
-    border: 1px solid rgba(202, 211, 245, 0.07);
+    padding: 1px 8px;
+    margin: 3px 3px;
+    background-color: rgba(91, 96, 120, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    /*border: 2px solid rgba(202, 211, 245, 0.5);*/
 }
 
 #taskbar button {
-    padding: 2px 5px;
-    margin: 3px 2px 1px 2px;
-    border: 1px solid transparent;
-    border-radius: 10px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    border-radius: 8px;
     transition: all 0.2s ease;
 }
 
 #taskbar button:hover {
-    background-color: rgba(147, 153, 178, 0.22);
-    border-color: rgba(202, 211, 245, 0.12);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-    margin-top: 1px;
-    /*margin-bottom: 3px;*/
+    background-color: rgba(147, 153, 178, 0.3);
 }
 
 #taskbar button.active {
-    background-color: rgba(114, 135, 253, 0.32);
-    border-color: rgba(114, 135, 253, 0.35);
-    box-shadow:
-        0 0 14px rgba(114, 135, 253, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    border-bottom: 2px solid rgba(114, 135, 253, 0.75);
-}
-
-#taskbar button.active:hover {
-    margin-top: 1px;
-    margin-bottom: 3px;
-    box-shadow:
-        0 4px 18px rgba(114, 135, 253, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    background-color: rgba(114, 135, 253, 0.4);
+    /*border-bottom: 2px solid #72b1fd;*/
 }
 
 #taskbar image {

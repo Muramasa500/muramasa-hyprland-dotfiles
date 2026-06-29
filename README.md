@@ -22,6 +22,7 @@ These configurations cover the complete desktop experience—from window managem
 <p align="center">
   <img src="screenshots/desktop1.png" alt="Muramasa's Dotfiles" width="100%">
   <img src="screenshots/desktop2.png" alt="Muramasa's Dotfiles" width="100%">
+  <img src="screenshots/desktop3.png" alt="Muramasa's Dotfiles" width="100%">
 </p>
 
 ## Overview
@@ -196,7 +197,7 @@ sudo pacman -S \
   zsh-syntax-highlighting slurp eza dust fd bat \
   ripgrep procs fzf zoxide btop thunar direnv zed \
   qalculate-gtk brightnessctl fastfetch sudo-rs  \
-  network-manager-applet flameshot
+  network-manager-applet hyprshot
   ```
 
 ## ⚠️ Hardware Notes
@@ -218,6 +219,7 @@ sudo pacman -S \
 - [HyprPolkitAgent](https://github.com/hyprwm/hyprpolkitagent) - Polkit authentication agent
 - [HyprSunset](https://github.com/hyprwm/hyprsunset) - Blue light filter
 - [XDG Desktop Portal Hyprland](https://github.com/hyprwm/xdg-desktop-portal-hyprland) - Integration layer
+- [Hyprshot](https://github.com/Gustash/hyprshot) - Screenshot utility
 
 #### Core Applications
 - [Waybar](https://github.com/Alexays/Waybar) - Status bar
@@ -234,7 +236,6 @@ sudo pacman -S \
 #### Utilities
 - [Cliphist](https://github.com/chromey/cliphist) - Clipboard history manager
 - [Btop](https://github.com/arista-nos/btop) - Resource monitor
-- [Flameshot](https://github.com/flameshot-org/flameshot) - Screenshot utility
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch) - System information display
 - [Starship](https://github.com/starship/starship) - Cross-shell prompt
 - [Jluttine/Rofi-Power-Menu](https://github.com/jluttine/rofi-power-menu) - Power menu script
