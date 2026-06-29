@@ -1,10 +1,10 @@
 <h1 align="center"> Muramasa's Dotfiles </h1>
 
-<p align="center"> 
+<p align="center">
 I've always enjoyed the Catppuccin Macchiato color palette, and really wanted to use it for my desktop environment. This is my personal configuration for Arch Linux runningcc the Hyprland tiling window compositor. Using Catppuccin Macchiato color palette, these dotfiles aim for a clean workflow without compromising on aesthetics. </p>
 
 <h2 align="center"> What You'll Find Here </h2>
-<p align="center"> 
+<p align="center">
 These configurations cover the complete desktop experience—from window management and terminal emulation to status bars, notification systems, and application defaults. Everything here is built around a practical approach, using practical tools with consistent visuals across the environment. </p>
 
 <p align="center"> My personal configuration files for <b>Arch Linux</b> with <b>Hyprland</b> compositor, featuring <b>Catppuccin Macchiato</b> theming. </p>
@@ -110,7 +110,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-### Option 2: Using GNU Stow 
+### Option 2: Using GNU Stow
 
 ```bash
 git clone git@github.com:Muramasa500/muramasa500-hyprland-dotfiles~/	dotfiles
@@ -139,7 +139,7 @@ cp -r gtk-3.0 /.config/* ~/.config/
 - Clipboard Manager: Cliphist integration for history
 - Power Menu: Shutdown, reboot, suspend, hibernate, logout
 - Application launcher: Start an application from a menu
-- A window switcher: Start a ALT-TAB style window switcher 
+- A window switcher: Start a ALT-TAB style window switcher
 - Multi-Monitor: Optimized for 3 displays
 - NVIDIA Support: GTX 1070 drivers configured
 - Language Switcher: Select keyboard layout
@@ -226,16 +226,15 @@ sudo pacman -S \
 - [Rofi](https://github.com/davatorium/rofi) - Application launcher
 - [Ghostty](https://github.com/ghostty-org/ghostty) - GPU-accelerated terminal
 - [Zed](https://github.com/zed-industries/zed) - Rust-based text editor
-- [Thunar](https://docs.xfce.org/apps/thunar/start) - XFCE file manager
-- [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) - Notification daemon
 
 #### Themes
 - [Catppuccin](https://github.com/catppuccin) - Color themes
 - [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts) - Icon/font patching
 
 #### Utilities
-- [Cliphist](https://github.com/chromey/cliphist) - Clipboard history manager
-- [Btop](https://github.com/arista-nos/btop) - Resource monitor
+- [Cliphist](https://github.com/sentriz/cliphist) - Clipboard history manager
+- [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) - Notification daemon
+- [Btop](https://github.com/aristocratos/btop) - Resource monitor
 - [Fastfetch](https://github.com/fastfetch-cli/fastfetch) - System information display
 - [Starship](https://github.com/starship/starship) - Cross-shell prompt
 - [Jluttine/Rofi-Power-Menu](https://github.com/jluttine/rofi-power-menu) - Power menu script
