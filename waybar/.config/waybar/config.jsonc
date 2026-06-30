@@ -16,14 +16,11 @@
   // "margin-right": 15,
   // "margin-bottom": 0,
 
-  "modules-left": [
-    "custom/menu",
-    "hyprland/workspaces",
-    "custom/weather",
-    "custom/layout",
-  ],
+  "modules-left": ["custom/menu", "custom/weather"],
+  "modules-center": ["hyprland/workspaces"],
   // "modules-center": ["hyprland/window"],
-  "modules-center": ["wlr/taskbar"],
+  // "modules-center":  //["wlr/taskbar"],
+
   "modules-right": [
     "mpris",
     "cpu",
@@ -41,7 +38,7 @@
   // ============================================================
   // ======                WORKSPACES                      ======
   // ============================================================
-  // FIXME: on-click does not work
+  // FIXME: on-click does not work, seems to be a reported bug
   "hyprland/workspaces": {
     "format": "{name} {windows}",
     "format-window-separator": " ",

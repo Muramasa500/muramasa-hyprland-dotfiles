@@ -13,29 +13,29 @@ window#waybar {
     margin: 10px 30px;
     padding: 3px 6px;
     color: #cad3f5;
-    border-radius: 14px;
+    border-radius: 0;
     border: 1px solid rgba(202, 211, 245, 0.08);
     box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.5),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04),
-        0 0 20px rgba(114, 135, 253, 0.08);
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 /* ---------------------------------------- */
 /* -----           TOOLTIP            ----- */
 /* ---------------------------------------- */
+/* TODO: possible to hide the black square corners behind the rounded corners?*/
 tooltip {
-    background-color: rgba(35, 35, 48, 0.96);
-    border: 1px solid rgba(138, 173, 244, 0.4);
-    border-radius: 10px;
-    padding: 12px 16px;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+    background-color: rgba(17, 17, 27, 0.92);
+    border: 1px solid rgba(138, 173, 244, 0.3);
+    border-radius: 12px;
+    padding: 10px 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 #tooltip {
     background-color: transparent;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 0;
     font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
     font-size: 14px;
@@ -52,44 +52,46 @@ tooltip {
 /* -----          WORKSPACES          ----- */
 /* ---------------------------------------- */
 #workspaces {
-    background-color: rgba(17, 17, 27, 0.5);
-    border-radius: 12px;
-    padding: 4px 6px;
-    margin: 2px 2px;
-    box-shadow: none;
+    background-color: transparent;
     border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 2px 2px;
 }
 
 #workspaces button {
-    background-color: rgba(40, 45, 65, 0.7);
-    color: #7b83a7;
+    /*background-color: rgba(55, 55, 55, 0.9);*/
+    /*background-color: rgba(35, 35, 75, 0.9);*/
+    background-color: rgba(46, 56, 98, 0.45);
+    color: #cad3f5;
     font-size: 19px;
-    font-weight: 600;
-    padding: 4px 14px 4px 10px;
-    margin: 1px 1px 1px 1px;
+    font-weight: bold;
+    padding: 2px 15px 2px 5px;
+    margin: 1px 0px 1px 0px;
     border-radius: 0;
     transition: all 0.2s ease;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid rgba(55, 55, 55, 0.3);
+    min-width: 6px;
 }
 
-/* Group curvature */
 #workspaces button:nth-child(3n + 1) {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    margin-left: 2px;
 }
 
 #workspaces button:nth-child(3n) {
-    margin-right: 8px;
+    margin-right: 12px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
-/* Hover */
-#workspaces button:hover {
-    background-color: rgba(60, 70, 100, 0.8);
-    color: #cad3f5;
-}
+/*#workspaces button:nth-child(3)::after,
+#workspaces button:nth-child(6)::after {
+    content: "";
+    position: absolute;
+}*/
 
 /* ======================================== */
 /* -----          ACTIVE COLORS       ----- */
@@ -97,61 +99,63 @@ tooltip {
 #workspaces button.active {
     font-weight: 700;
     color: #cad3f5;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: inherit;
     opacity: 1;
-    background-color: rgba(114, 135, 253, 0.5);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    background-color: rgba(114, 135, 253, 0.4);
 }
-
-/* --- Monitor 1 (WS 1-3) --- */
 #workspaces button.active:nth-child(1) {
-    background-color: rgba(254, 100, 11, 0.35);
-    border-bottom: 3px solid rgb(254, 100, 11);
-}
-#workspaces button.active:nth-child(2) {
-    background-color: rgba(220, 138, 120, 0.3);
-    border-bottom: 3px solid rgb(220, 138, 120);
-}
-#workspaces button.active:nth-child(3) {
-    background-color: rgba(136, 57, 239, 0.35);
-    border-bottom: 3px solid rgb(136, 57, 239);
+    border-bottom: 4px solid rgb(254, 100, 11);
+    box-shadow: 0 0 10px rgba(254, 100, 11, 0.4);
 }
 
-/* --- Monitor 2 (WS 4-6) --- */
-#workspaces button.active:nth-child(4) {
-    background-color: rgba(64, 160, 43, 0.35);
-    border-bottom: 2px solid rgb(64, 160, 43);
+#workspaces button.active:nth-child(2) {
+    border-bottom: 4px solid rgb(220, 138, 120);
+    box-shadow: 0 0 10px rgba(220, 138, 120, 0.4);
 }
+
+#workspaces button.active:nth-child(3) {
+    border-bottom: 4px solid rgb(136, 57, 239);
+    box-shadow: 0 0 10px rgba(136, 57, 239, 0.4);
+}
+
+#workspaces button.active:nth-child(4) {
+    border-bottom: 4px solid rgb(64, 160, 43);
+    box-shadow: 0 0 10px rgba(64, 160, 43, 0.4);
+}
+
 #workspaces button.active:nth-child(5) {
-    background-color: rgba(230, 69, 83, 0.3);
-    border-bottom: 2px solid rgb(230, 69, 83);
+    border-bottom: 4px solid rgb(230, 69, 83);
+    box-shadow: 0 0 10px rgba(230, 69, 83, 0.4);
 }
 #workspaces button.active:nth-child(6) {
-    background-color: rgba(136, 57, 239, 0.35);
-    border-bottom: 2px solid rgb(136, 57, 239);
+    border-bottom: 4px solid rgb(136, 57, 239);
+    box-shadow: 0 0 10px rgba(136, 57, 239, 0.4);
 }
-
-/* --- Monitor 3 (WS 7-9) --- */
 #workspaces button.active:nth-child(7) {
-    background-color: rgba(234, 118, 203, 0.3);
-    border-bottom: 2px solid rgb(234, 118, 203);
+    border-bottom: 4px solid rgb(234, 118, 203);
+    box-shadow: 0 0 10px rgba(234, 118, 203, 0.4);
 }
 #workspaces button.active:nth-child(8) {
-    background-color: rgba(114, 135, 253, 0.45);
-    border-bottom: 2px solid rgb(114, 135, 253);
+    border-bottom: 4px solid rgb(114, 135, 253);
+    box-shadow: 0 0 10px rgba(114, 135, 253, 0.4);
 }
 #workspaces button.active:nth-child(9) {
-    background-color: rgba(210, 15, 57, 0.35);
-    border-bottom: 2px solid rgb(210, 15, 57);
+    border-bottom: 4px solid rgb(210, 15, 57);
+    box-shadow: 0 0 10px rgba(210, 15, 57, 0.4);
 }
 #workspaces button.active:nth-child(n + 10) {
-    background-color: rgba(32, 159, 181, 0.3);
-    border-bottom: 2px solid rgb(32, 159, 181);
+    border-bottom: 4px solid rgb(32, 159, 181);
+    box-shadow: 0 0 10px rgba(32, 159, 181, 0.4);
 }
 
 /* ---------------------------------------- */
 /* -----       GENERAL MODULES        ----- */
 /* ---------------------------------------- */
 #custom-menu,
+/*#window,*/
 #custom-weather,
 #mpris,
 #cpu,
@@ -170,7 +174,7 @@ tooltip {
     color: #cad3f5;
 }
 
-#custom-menu:hover,
+/*#window:hover,*/
 #custom-weather:hover,
 #cpu:hover,
 #memory:hover,
@@ -178,19 +182,13 @@ tooltip {
 #pulseaudio:hover,
 #custom-cliphist:hover,
 #language:hover,
-#clock:hover,
-#custom-power:hover {
-    background-color: rgba(114, 135, 253, 0.15);
-    border-radius: 8px;
-    border: 1px solid rgba(114, 135, 253, 0.25);
-    box-shadow: 0 0 12px rgba(114, 135, 253, 0.12);
-}
-
-#custom-menu:hover,
-#custom-power:hover {
-    background-color: rgba(114, 135, 253, 0.25);
-    border: 1px solid rgba(114, 135, 253, 0.35);
-    color: #ffffff;
+#clock:hover {
+    background-color: rgba(114, 135, 253, 0.12);
+    border-radius: 10px;
+    border: 1px solid rgba(114, 135, 253, 0.28);
+    box-shadow:
+        0 0 14px rgba(114, 135, 253, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 /* ---------------------------------------- */
@@ -223,6 +221,7 @@ tooltip {
 /* ---------------------------------------- */
 /* -----        MIDDLE MODULES        ----- */
 /* ---------------------------------------- */
+/*FIXME: stop icons from jumping*/
 #taskbar {
     padding: 1px 6px;
     margin: 2px 3px;
@@ -246,6 +245,8 @@ tooltip {
     background-color: rgba(147, 153, 178, 0.22);
     border-color: rgba(202, 211, 245, 0.12);
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    margin-top: 1px;
+    margin-bottom: 3px;
 }
 
 #taskbar button.active {
@@ -258,6 +259,8 @@ tooltip {
 }
 
 #taskbar button.active:hover {
+    margin-top: 1px;
+    margin-bottom: 3px;
     box-shadow:
         0 4px 18px rgba(114, 135, 253, 0.35),
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
@@ -270,7 +273,7 @@ tooltip {
 /* ---------------------------------------- */
 /* -----        RIGHT MODULES         ----- */
 /* ---------------------------------------- */
-/* Music module */
+/* Music module  */
 #mpris {
     background-color: rgba(91, 96, 120, 0.3);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -288,19 +291,29 @@ tooltip {
     border-radius: 12px;
 }
 
-/* CPU & Memory */
+/*#battery {
+    border-bottom: 2px solid #a6da95;
+}*/
+
+/*CPU & Memory */
 #cpu,
 #memory {
     font-size: 16px;
-    padding: 3px 12px;
-    margin: 4px 2px;
+    padding: 2px 10px 2px 5px;
+    margin: 5px 2px;
 }
 
-/* Network */
+/*#temperature.critical {
+    background-color: #ed8796;
+    color: #24273a;
+    font-size: 15px;
+    border-bottom: 2px solid #ed8796;
+}*/
+
 #network {
     font-size: 18px;
-    padding: 3px 12px;
-    margin: 4px 2px;
+    padding: 2px 11px 2px 6px;
+    margin: 5px 2px;
 }
 
 /* Volume control */
@@ -308,46 +321,47 @@ tooltip {
     background-color: rgba(0, 0, 0, 0);
     color: #cad3f5;
     font-size: 16px;
-    padding: 3px 12px;
-    margin: 4px 2px;
+    padding: 2px 10px 2px 5px;
+    margin: 5px 2px;
 }
-
 #pulseaudio.muted {
     color: #6e738d;
     font-size: 18px;
-    padding: 3px 12px;
-    margin: 4px 2px;
+    padding: 2px 10px 2px 5px;
+    margin: 5px 2px;
 }
 
 #custom-cliphist {
     font-size: 16px;
-    padding: 3px 10px;
-    margin: 4px 2px;
+    padding: 2px 2px 2px 7px;
+    margin: 5px 2px;
 }
 
 #tray {
-    padding: 2px 5px;
+    margin: 0;
+    padding: 2px 5px 2px 5px;
     font-size: 15px;
-    margin: 4px 2px;
+    margin: 1px 2px;
 }
 
 #language {
     font-size: 16px;
-    padding: 3px 10px;
-    margin: 4px 2px;
+    padding: 2px 4px 2px 5px;
+    margin: 5px 2px;
 }
 
+/* TODO: why align to right not works */
 #clock {
     font-size: 12px;
-    padding: 3px 10px;
-    margin: 4px 2px;
+    padding: 2px 3px 2px 5px;
+    margin: 3px 2px;
 }
 
 #custom-power {
     min-width: 20px;
-    padding: 3px 10px;
+    padding: 2px 10px 2px 7px;
     font-size: 18px;
-    margin: 4px 10px 4px 3px;
+    margin: 3px 10px 3px 3px;
     border-radius: 50px;
 }
 

@@ -5,7 +5,7 @@ hl.window_rule({
     match = { class = "org.pulseaudio.pavucontrol" },
     float = true,
     center = true,
-    size = { 800, 600 },
+    size = { 900, 600 },
     opacity = "0.9 0.9",
 })
 
@@ -115,6 +115,21 @@ hl.window_rule({
 })
 
 
+hl.window_rule({
+    match = { class = "app.zen_browser.zen", title = "About Zen Browser" },
+    float = true,
+    center = true,
+    size = { 800, 600 },
+    opacity = "0.9 0.9",
+})
+
+hl.window_rule({
+    match = { class = "app.zen_browser.zen", title = "Library" },
+    float = true,
+    center = true,
+    size = { 1000, 800 },
+    opacity = "0.9 0.9",
+})
 
 
 -- TODO: btop and htop as floating windows
