@@ -161,3 +161,8 @@ hl.window_rule({
     size = { 1000, 800 },
     opacity = "0.9 0.9",
 })
+
+
+hl.on("hyprland.start", function()
+    os.execute("hyprctl keyword layerrule 'ignore, selection'")
+end)

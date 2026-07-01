@@ -5,7 +5,7 @@
 
   "layer": "top",
   "position": "top",
-  "height": 45,
+  "height": 42,
   "spacing": 2,
 
   "margin-top": 0,
@@ -92,7 +92,8 @@
       "class<vlc>": "󰕼",
       "class<soffice>": "",
       "class<libreoffice-impress>": "",
-      "class<qt6ct>": "",
+      "class<qt6ct>": "󰒓",
+      "class<qt5ct>": "󰒓",
       "title<Yazi>": "󰇥",
       "class<audacity>": "󰗅",
       "class<org.qbittorrent.qBittorrent>": "",
@@ -116,6 +117,11 @@
       "class<io.ente.auth>": "󰦯",
       "class<com.bitwarden.desktop>": "󰦯",
       "class<virtualbox>": "󱩛",
+      "class<auto-cpufreq-gtk>": "",
+      "title<Network Connections>": "󰌘",
+      "title<btop>": "󰓅",
+      "title<htop>": "󰓅",
+      "title<org.gnome.Calendar>": "󰃯",
     },
     "active-only": false,
     "show-special": true,
@@ -200,7 +206,7 @@
   // Show CPU usage
   "cpu": {
     "format": "{usage}% ",
-    "on-click": "~/.config/waybar/launch-btop.sh",
+    "on-click": "auto-cpufreq-gtk",
   },
 
   // Show memory usage
