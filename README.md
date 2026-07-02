@@ -22,7 +22,6 @@ These configurations cover the complete desktop experience—from window managem
 <p align="center">
   <img src="screenshots/desktop1.png" alt="Muramasa's Dotfiles" width="100%">
   <img src="screenshots/desktop2.png" alt="Muramasa's Dotfiles" width="100%">
-  <img src="screenshots/desktop3.png" alt="Muramasa's Dotfiles" width="100%">
 </p>
 
 ## Overview
@@ -197,7 +196,8 @@ sudo pacman -S \
   zsh-syntax-highlighting slurp eza dust fd bat \
   ripgrep procs fzf zoxide btop thunar direnv zed \
   qalculate-gtk brightnessctl fastfetch sudo-rs  \
-  network-manager-applet hyprshot
+  network-manager-applet hyprshot ttf-jetbrains-mono-nerd \
+  noto-fonts
   ```
 
 ## ⚠️ Hardware Notes

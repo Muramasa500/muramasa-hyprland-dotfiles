@@ -131,6 +131,15 @@ hl.window_rule({
     opacity = "0.9 0.9",
 })
 
+hl.window_rule({
+    match = { class = "org.gnome.FileRoller" },
+    float = true,
+    center = true,
+    size = { 900, 600 },
+    opacity = "0.9 0.9",
+})
+
+
 
 -- TODO: btop and htop as floating windows
 -- hl.window_rule({
