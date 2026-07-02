@@ -13,7 +13,6 @@ local screenLocker = "hyprlock"
 local browser = "firefox"
 local calculator = "qalculate-gtk"
 local gui_editor = "zeditor"
--- local cli_editor = "kitty nvim"
 
 
 -- ============================================================
@@ -55,11 +54,11 @@ hl.bind(mainMod .. " + X",
         " + ~/.config/hypr/hypr-styling.lua &&" .. gui_editor .. " + ~/.config/hypr/hypr-window-rules.lua"),
     { description = "Open Hyprland & Waybar configs" })
 -- Reload hyprland
-hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("kitty hyprctl reload"), { description = "Restart Hyprland" })
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("ghostty -e hyprctl reload"), { description = "Restart Hyprland" })
 -- Reload waybar
-hl.bind(mainMod .. " + ALT + R", hl.dsp.exec_cmd("kitty killall waybar && nohup waybar &"),
+hl.bind(mainMod .. " + ALT + R", hl.dsp.exec_cmd("ghostty -e killall waybar && nohup waybar &"),
     { description = "Restarts Waybar" })
-hl.bind(mainMod .. " + 0", hl.dsp.exec_cmd("kitty nohup waybar &"), { description = "Start Waybar" })
+hl.bind(mainMod .. " + 0", hl.dsp.exec_cmd("ghostty -e nohup waybar &"), { description = "Start Waybar" })
 
 
 -- ============================================================
@@ -229,7 +228,7 @@ hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume -l '1.0' @DEFA
     { locked = true, repeating = true, description = "Lower volume" })
 
 -- backlight (locked + repeating)
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brillo -q -u 300000 -A 5"),
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"),
     { locked = true, repeating = true, description = "Increase brightness" })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brillo -q -u 300000 -U 5"),
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"),
     { locked = true, repeating = true, description = "Decrease brightness" })

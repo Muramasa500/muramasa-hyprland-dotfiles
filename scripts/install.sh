@@ -69,7 +69,6 @@ PACKAGES=(
     "libsecret"
     "gvfs-mtp"
     "glib-networking"
-    "polkit-gnome"
     "networkmanager"
     "network-manager-applet"
     "playerctl"
@@ -104,6 +103,9 @@ PACKAGES=(
     "brightnessctl"
     "direnv"
     "hyprshot"
+    "zed"
+    "ttf-jetbrains-mono-nerd"
+    "noto-fonts"
 )
 
 # Install only missing packages

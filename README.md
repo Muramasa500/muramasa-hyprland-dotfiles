@@ -173,8 +173,11 @@ Files NOT in this repo (ignored):
 ## Post-Clone Configuration
 
 After cloning, you must:
-1. Create ~/.config/weather-app/geolocation with your own coordinates.
-2. Change monitor setup on hyprland (it is currently configured for 3 monitors)
+1. Configure weather app in `~/.config/weather-app/`: 
+   - cp geolocation.example geolocation
+2. Configure monitors in `~/.config/hypr/`:
+   - cp hypr-monitor-workspaces.lua.example hypr-monitor-workspaces.lua
+   - Run `hyprctl monitors` to find your output names
 3. It is configured to use dkms Nvidia drivers from AUR, change configuration if needed.
 
 
@@ -185,19 +188,18 @@ Install required packages:
 ```bash
 sudo pacman -S \
   hyprland xdg-desktop-portal-hyprland hyprpolkitagent hyprlock \
-  hypridle hyprpaper hyprsunset cliphist wl-clipboard xclip btop \
+  hypridle hyprpaper hyprsunset cliphist wl-clipboard xclip \
   waybar rofi ghostty swaync gnome-keyring libsecret \
-  zsh starship jq curl playerctl pavucontrol \
-  gvfs-mtp glib-networking polkit-gnome \
+  zsh starship jq curl playerctl pavucontrol wireplumber \
+  gvfs-mtp glib-networking \
   networkmanager network-manager-applet \
   thunar thunar-archive-plugin thunar-media-tags-plugin \
   thunar-vcs-plugin thunar-volman neovim \
   zsh-autosuggestions zsh-history-substring-search \
   zsh-syntax-highlighting slurp eza dust fd bat \
-  ripgrep procs fzf zoxide btop thunar direnv zed \
+  ripgrep procs fzf zoxide btop direnv zed \
   qalculate-gtk brightnessctl fastfetch sudo-rs  \
-  network-manager-applet hyprshot ttf-jetbrains-mono-nerd \
-  noto-fonts
+  hyprshot ttf-jetbrains-mono-nerd noto-fonts
   ```
 
 ## ⚠️ Hardware Notes
