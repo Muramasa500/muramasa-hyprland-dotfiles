@@ -199,7 +199,7 @@ sudo pacman -S \
   zsh-syntax-highlighting slurp eza dust fd bat \
   ripgrep procs fzf zoxide btop direnv zed \
   qalculate-gtk brightnessctl fastfetch sudo-rs  \
-  hyprshot ttf-jetbrains-mono-nerd noto-fonts
+  hyprshot ttf-jetbrains-mono-nerd noto-fonts papirus-icon-theme 
   ```
 
 ## ⚠️ Hardware Notes
@@ -207,9 +207,7 @@ sudo pacman -S \
 - **GPU:** NVIDIA GTX 1070
   - Uses `nvidia-550xx-dkms` from AUR (newer drivers cause issues)
 - **Input:** Logitech wireless keyboard/mouse via single Bolt USB receiver
-- **Displays:** 3 monitors
 - **Network:** Ethernet (no WiFi configured)
--
 
 ## Credits
 

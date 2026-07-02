@@ -106,6 +106,7 @@ PACKAGES=(
     "zed"
     "ttf-jetbrains-mono-nerd"
     "noto-fonts"
+    "papirus-icon-theme"
 )
 
 # Install only missing packages
